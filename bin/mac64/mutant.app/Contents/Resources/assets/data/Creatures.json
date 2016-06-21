@@ -1,0 +1,10 @@
+{
+	"player": {
+		"texture": "assets/textures/Creature_Player.png",
+		"size": [16, 32],
+		"bounds": [16, 32],
+		"components": [
+			{"type": "PlayerController", "args": []}
+		]
+	}
+}

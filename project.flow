@@ -1,0 +1,34 @@
+{
+  luxe:{
+    window: {
+      width:960,
+      height:640,
+      title:'mutant',
+      fullscreen:false,
+      resizable:true,
+      borderless:false
+    }
+  },
+
+  project : {
+    name : 'mutant',
+    version : '1.0.0',
+    author : 'henrikmelsom',
+
+    app : {
+      name : 'mutant',
+      package : 'com.henrikmelsom.mutant'
+    },
+
+    build : {
+      dependencies : {
+        luxe : '*',
+        nape : '*',
+      }
+    },
+
+    files : {
+      assets : 'assets/'
+    }
+  }
+}

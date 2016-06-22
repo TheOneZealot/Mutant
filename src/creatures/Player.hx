@@ -6,15 +6,16 @@ import phoenix.Texture;
 
 class Player extends Creature
 {
-	public function new(_pos:Vector)
+	public function new(_pos:Vector, _name:String)
 	{
 		// setup local variables
 		var anim_object = Luxe.resources.json("assets/animations/Creature_Player.json").asset.json;
 
 		// setup creature
-		super("player", _pos, new Vector(16, 32), new Vector(12, 30));
+		super(_name, _pos, new Vector(16, 32), new Vector(12, 30));
 		texture = Luxe.resources.texture("assets/textures/Creature_Player.png");
 		texture.filter_min = texture.filter_mag = FilterType.nearest;
+		depth = 1.1;
 
 		// setup animation
 		add(animation = new SpriteAnimation({name: "animation"}));
@@ -32,13 +33,23 @@ class Player extends Creature
 	override function update(dt:Float)
 	{
 		// animation control
-		if (Math.abs(controller.body.velocity.x) > 16 && animation.animation != "run") 
+		if (controller.body.velocity.x > 0) flipx = false;
+		else if (controller.body.velocity.x < 0) flipx = true;
+		
+		if (controller.grounded)
 		{
-			animation.animation = "run";
+			if (Math.abs(controller.body.velocity.x) > 16)
+			{
+				set_animation("run");
+			}
+			else if (Math.abs(controller.body.velocity.x) < 16)
+			{
+				set_animation("idle");
+			}
 		}
-		else if (Math.abs(controller.body.velocity.x) < 16 && animation.animation != "idle")
+		else
 		{
-			animation.animation = "idle";
+			set_animation("fall");
 		}
 	}
 }

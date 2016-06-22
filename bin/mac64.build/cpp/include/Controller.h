@@ -9,14 +9,22 @@
 #include <luxe/Component.h>
 #endif
 HX_DECLARE_CLASS0(Controller)
+HX_DECLARE_CLASS0(Creature)
 HX_DECLARE_CLASS1(luxe,Component)
+HX_DECLARE_CLASS1(luxe,Emitter)
+HX_DECLARE_CLASS1(luxe,Entity)
 HX_DECLARE_CLASS1(luxe,ID)
-HX_DECLARE_CLASS3(luxe,components,sprite,SpriteAnimation)
-HX_DECLARE_CLASS2(nape,callbacks,Callback)
-HX_DECLARE_CLASS2(nape,callbacks,InteractionCallback)
+HX_DECLARE_CLASS1(luxe,Objects)
+HX_DECLARE_CLASS1(luxe,Sprite)
+HX_DECLARE_CLASS1(luxe,Visual)
+HX_DECLARE_CLASS2(nape,geom,AABB)
+HX_DECLARE_CLASS2(nape,geom,Ray)
+HX_DECLARE_CLASS2(nape,geom,RayResult)
+HX_DECLARE_CLASS2(nape,geom,Vec2)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 HX_DECLARE_CLASS2(nape,phys,Material)
+HX_DECLARE_CLASS2(nape,space,Space)
 
 
 class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
@@ -53,40 +61,55 @@ class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
 		static ::nape::phys::Material get_normal_friction( );
 		static Dynamic get_normal_friction_dyn();
 
-		::nape::phys::Body _body;
-		::nape::phys::Body body;
-		::luxe::components::sprite::SpriteAnimation _animation;
-		::luxe::components::sprite::SpriteAnimation animation;
-		bool _jumped_this_frame;
-		bool _grounded;
-		Float _slope_angle;
+		Float gravity;
 		Float acceleration;
 		Float max_speed;
 		Float jump_impulse;
+		Float max_slope_angle;
+		Float max_slope_y;
+		::Creature creature;
+		::nape::phys::Body body;
+		::nape::geom::AABB bounds;
+		bool grounded;
+		bool slope;
+		::nape::space::Space space;
+		::nape::geom::Vec2 input_vector;
+		int rays_horizontal;
+		int rays_vertical;
+		Float skin_thickness;
 		virtual Void onadded( );
 
 		virtual Void update( Float dt);
 
-		virtual Void move( int direction);
-		Dynamic move_dyn();
+		virtual Void raycast_horizontal( Float dt);
+		Dynamic raycast_horizontal_dyn();
+
+		virtual Void raycast_vertical( Float dt);
+		Dynamic raycast_vertical_dyn();
+
+		virtual Void slope_raycast( Float dt);
+		Dynamic slope_raycast_dyn();
+
+		virtual Void debug_ray( ::nape::geom::Ray ray,::nape::geom::RayResult result);
+		Dynamic debug_ray_dyn();
+
+		virtual Void add_movement_input( ::nape::geom::Vec2 input);
+		Dynamic add_movement_input_dyn();
 
 		virtual Void jump( );
 		Dynamic jump_dyn();
 
-		virtual Void begincollideterrain( ::nape::callbacks::InteractionCallback cb);
-		Dynamic begincollideterrain_dyn();
+		virtual ::nape::space::Space get_space( );
+		Dynamic get_space_dyn();
 
-		virtual Void ongoingcollideterrain( ::nape::callbacks::InteractionCallback cb);
-		Dynamic ongoingcollideterrain_dyn();
-
-		virtual Void endcollideterrain( ::nape::callbacks::InteractionCallback cb);
-		Dynamic endcollideterrain_dyn();
+		virtual ::Creature get_creature( );
+		Dynamic get_creature_dyn();
 
 		virtual ::nape::phys::Body get_body( );
 		Dynamic get_body_dyn();
 
-		virtual ::luxe::components::sprite::SpriteAnimation get_animation( );
-		Dynamic get_animation_dyn();
+		virtual ::nape::geom::AABB get_bounds( );
+		Dynamic get_bounds_dyn();
 
 		virtual Void init( );
 

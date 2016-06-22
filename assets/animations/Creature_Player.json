@@ -7,8 +7,14 @@
 	},
 	"run": {
 		"frame_size": {"x": "16", "y": "32"},
-		"frameset": ["3-5", "4"],
+		"frameset": ["3-6"],
 		"loop": "true",
 		"speed": "4"
+	},
+	"fall": {
+		"frame_size": {"x": "16", "y": "32"},
+		"frameset": ["7-8"],
+		"loop": "true",
+		"speed": "2"
 	}
 }

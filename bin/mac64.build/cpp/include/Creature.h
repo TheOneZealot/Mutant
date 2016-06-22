@@ -53,6 +53,9 @@ class HXCPP_CLASS_ATTRIBUTES  Creature_obj : public ::luxe::Sprite_obj{
 		::luxe::components::sprite::SpriteAnimation animation;
 		::luxe::components::physics::nape::BoxCollider collider;
 		::nape::phys::Body body;
+		virtual Void set_animation( ::String anim_name);
+		Dynamic set_animation_dyn();
+
 		virtual Void init( );
 
 		virtual Void ondestroy( );

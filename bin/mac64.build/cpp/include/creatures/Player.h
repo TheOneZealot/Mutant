@@ -24,12 +24,12 @@ class HXCPP_CLASS_ATTRIBUTES  Player_obj : public ::Creature_obj{
 		typedef ::Creature_obj super;
 		typedef Player_obj OBJ_;
 		Player_obj();
-		Void __construct(::phoenix::Vector _pos);
+		Void __construct(::phoenix::Vector _pos,::String _name);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="creatures.Player")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< Player_obj > __new(::phoenix::Vector _pos);
+		static hx::ObjectPtr< Player_obj > __new(::phoenix::Vector _pos,::String _name);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Player_obj();

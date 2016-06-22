@@ -14,12 +14,13 @@ import luxe.components.physics.nape.BoxCollider;
 import luxe.physics.nape.DebugDraw;
 import luxe.importers.tiled.TiledMap;
 import luxe.importers.tiled.TiledObjectGroup;
+import phoenix.Texture;
 
 class World
 {
 	public static var CBTYPE_TERRAIN = new CbType();
 	public static var CBTYPE_CREATURE = new CbType();
-	
+
 	public static var debugdraw:DebugDraw;
 
 	var map:TiledMap;
@@ -28,14 +29,20 @@ class World
 
 	public function new()
 	{
+		creatures.Player;
+		creatures.Soldier;
+
 		var map_data:String = Luxe.resources.text("assets/maps/test/Gameplay_Testing.tmx").asset.text;
 		map = new TiledMap({format: "tmx", asset_path: "assets/maps/test", tiled_file_data: map_data});
 
 		reset();
+
+		map.display({filter: FilterType.nearest, depth: 0.9});
 	}
 
 	public function generate_collision()
 	{
+		map.layer("collision").visible = false;
 		var bounds = map.layer("collision").bounds_fitted();
 
 		map_static = new Body(BodyType.STATIC);
@@ -79,10 +86,23 @@ class World
 				switch (object.type)
 				{
 					case "Spawn":
-					
-						var player_size:Vector = new Vector(map.tile_width, map.tile_height);
+						var creature_name:String = object.properties.get("Creature");
 						var body_pos:Vector = object.pos.add(new Vector(object.width, object.height).divideScalar(2));
-						player = new creatures.Player(body_pos);
+						var creature:Creature = Type.createInstance(
+							Type.resolveClass("creatures."+creature_name), 
+							[body_pos, object.name]);
+						trace(Type.resolveClass("creatures.Player"));
+						if (creature_name == "Player")
+						{
+							player = creature;
+						}
+
+					case "Dynamic":
+						var body_pos:Vector = object.pos.add(new Vector(object.width, object.height).divideScalar(2));
+						var body:Body = new Body(BodyType.DYNAMIC, new Vec2(body_pos.x, body_pos.y));
+						body.shapes.add(new Polygon(Polygon.box(object.width, object.height)));
+						body.space = Luxe.physics.nape.space;
+						debugdraw.add(body);
 				}
 			}
 		}
@@ -95,37 +115,9 @@ class World
 			debugdraw.destroy();
 			debugdraw = null;
 		}
-
 		debugdraw = new DebugDraw();
 		Luxe.physics.nape.debugdraw = debugdraw;
-
-		Luxe.physics.nape.space.listeners.add(new InteractionListener(
-			CbEvent.BEGIN, InteractionType.COLLISION,
-			CBTYPE_CREATURE,
-			CBTYPE_TERRAIN,
-			function(cb:InteractionCallback) {
-				var entity:Entity = cb.int1.userData.entity;
-				entity.events.fire("begin.collide.terrain", cb);
-			}
-		));
-		Luxe.physics.nape.space.listeners.add(new InteractionListener(
-			CbEvent.ONGOING, InteractionType.COLLISION,
-			CBTYPE_CREATURE,
-			CBTYPE_TERRAIN,
-			function(cb:InteractionCallback) {
-				var entity:Entity = cb.int1.userData.entity;
-				entity.events.fire("ongoing.collide.terrain", cb);
-			}
-		));
-		Luxe.physics.nape.space.listeners.add(new InteractionListener(
-			CbEvent.END, InteractionType.COLLISION,
-			CBTYPE_CREATURE,
-			CBTYPE_TERRAIN,
-			function(cb:InteractionCallback) {
-				var entity:Entity = cb.int1.userData.entity;
-				entity.events.fire("end.collide.terrain", cb);
-			}
-		));
+		Luxe.physics.nape.draw = false;
 
 		generate_collision();
 		generate_objects();

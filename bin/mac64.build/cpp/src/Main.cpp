@@ -142,7 +142,7 @@ Void Main_obj::ready( ){
 				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",30,0x087e5c05)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
-					__result->Add(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00") , HX_HCSTRING("assets/textures/Creature_Player.png","\x91","\x4b","\xf8","\xb3"),false);
+					__result->Add(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00") , HX_HCSTRING("assets/textures/Tileset_Mansion.png","\x34","\x55","\x4f","\xd0"),false);
 					return __result;
 				}
 				return null();
@@ -152,7 +152,33 @@ Void Main_obj::ready( ){
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",31,0x087e5c05)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00") , HX_HCSTRING("assets/textures/Creature_Player.png","\x91","\x4b","\xf8","\xb3"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(31)
+		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
+		struct _Function_1_5{
+			inline static Dynamic Block( ){
 				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",32,0x087e5c05)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00") , HX_HCSTRING("assets/textures/Creature_Soldier.png","\xa8","\xb5","\x53","\x57"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(32)
+		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
+		struct _Function_1_6{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",34,0x087e5c05)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00") , HX_HCSTRING("assets/animations/Creature_Player.json","\x29","\x20","\x7c","\x05"),false);
@@ -161,51 +187,51 @@ Void Main_obj::ready( ){
 				return null();
 			}
 		};
-		HX_STACK_LINE(32)
-		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
-		struct _Function_1_5{
-			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp2,Dynamic &tmp3,Dynamic &tmp1){
+		HX_STACK_LINE(34)
+		Dynamic tmp5 = _Function_1_6::Block();		HX_STACK_VAR(tmp5,"tmp5");
+		struct _Function_1_7{
+			inline static Dynamic Block( Dynamic &tmp5,Dynamic &tmp,Dynamic &tmp4,Dynamic &tmp2,Dynamic &tmp3,Dynamic &tmp1){
 				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",26,0x087e5c05)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("texts","\x26","\x4b","\x99","\x0d") , cpp::ArrayBase_obj::__new().Add(tmp),false);
-					__result->Add(HX_HCSTRING("textures","\x38","\xf7","\xce","\x65") , cpp::ArrayBase_obj::__new().Add(tmp1).Add(tmp2),false);
-					__result->Add(HX_HCSTRING("jsons","\x4b","\xa1","\xd1","\x54") , cpp::ArrayBase_obj::__new().Add(tmp3),false);
+					__result->Add(HX_HCSTRING("textures","\x38","\xf7","\xce","\x65") , cpp::ArrayBase_obj::__new().Add(tmp1).Add(tmp2).Add(tmp3).Add(tmp4),false);
+					__result->Add(HX_HCSTRING("jsons","\x4b","\xa1","\xd1","\x54") , cpp::ArrayBase_obj::__new().Add(tmp5),false);
 					return __result;
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(26)
-		Dynamic tmp4 = _Function_1_5::Block(tmp,tmp2,tmp3,tmp1);		HX_STACK_VAR(tmp4,"tmp4");
+		Dynamic tmp6 = _Function_1_7::Block(tmp5,tmp,tmp4,tmp2,tmp3,tmp1);		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(26)
-		::luxe::Parcel tmp5 = ::luxe::Parcel_obj::__new(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+		::luxe::Parcel tmp7 = ::luxe::Parcel_obj::__new(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(26)
-		::luxe::Parcel parcel = tmp5;		HX_STACK_VAR(parcel,"parcel");
-		HX_STACK_LINE(36)
-		::luxe::Parcel tmp6 = parcel;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(37)
-		::phoenix::Color tmp7 = ::phoenix::Color_obj::__new((int)1,(int)1,(int)1,((Float)0.85));		HX_STACK_VAR(tmp7,"tmp7");
+		::luxe::Parcel parcel = tmp7;		HX_STACK_VAR(parcel,"parcel");
 		HX_STACK_LINE(38)
-		Dynamic tmp8 = this->onassetsloaded_dyn();		HX_STACK_VAR(tmp8,"tmp8");
-		struct _Function_1_6{
-			inline static Dynamic Block( ::luxe::Parcel &tmp6,::phoenix::Color &tmp7,Dynamic &tmp8){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",35,0x087e5c05)
+		::luxe::Parcel tmp8 = parcel;		HX_STACK_VAR(tmp8,"tmp8");
+		HX_STACK_LINE(39)
+		::phoenix::Color tmp9 = ::phoenix::Color_obj::__new((int)1,(int)1,(int)1,((Float)0.85));		HX_STACK_VAR(tmp9,"tmp9");
+		HX_STACK_LINE(40)
+		Dynamic tmp10 = this->onassetsloaded_dyn();		HX_STACK_VAR(tmp10,"tmp10");
+		struct _Function_1_8{
+			inline static Dynamic Block( ::phoenix::Color &tmp9,Dynamic &tmp10,::luxe::Parcel &tmp8){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","Main.hx",37,0x087e5c05)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
-					__result->Add(HX_HCSTRING("parcel","\xc9","\x78","\x7c","\xed") , tmp6,false);
-					__result->Add(HX_HCSTRING("background","\xee","\x93","\x1d","\x26") , tmp7,false);
-					__result->Add(HX_HCSTRING("oncomplete","\xd8","\x18","\xcd","\x83") , tmp8,false);
+					__result->Add(HX_HCSTRING("parcel","\xc9","\x78","\x7c","\xed") , tmp8,false);
+					__result->Add(HX_HCSTRING("background","\xee","\x93","\x1d","\x26") , tmp9,false);
+					__result->Add(HX_HCSTRING("oncomplete","\xd8","\x18","\xcd","\x83") , tmp10,false);
 					return __result;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(35)
-		Dynamic tmp9 = _Function_1_6::Block(tmp6,tmp7,tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(35)
-		::luxe::ParcelProgress_obj::__new(tmp9);
-		HX_STACK_LINE(41)
+		HX_STACK_LINE(37)
+		Dynamic tmp11 = _Function_1_8::Block(tmp9,tmp10,tmp8);		HX_STACK_VAR(tmp11,"tmp11");
+		HX_STACK_LINE(37)
+		::luxe::ParcelProgress_obj::__new(tmp11);
+		HX_STACK_LINE(43)
 		parcel->load(null());
 	}
 return null();
@@ -214,54 +240,54 @@ return null();
 
 Void Main_obj::onassetsloaded( ::luxe::Parcel _){
 {
-		HX_STACK_FRAME("Main","onassetsloaded",0x4a2784dc,"Main.onassetsloaded","Main.hx",45,0x087e5c05)
+		HX_STACK_FRAME("Main","onassetsloaded",0x4a2784dc,"Main.onassetsloaded","Main.hx",47,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_,"_")
-		HX_STACK_LINE(46)
-		::phoenix::Color tmp = ::phoenix::Color_obj::__new(((Float)0.85),((Float)0.85),((Float)0.85),null());		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(46)
+		HX_STACK_LINE(48)
+		::phoenix::Color tmp = ::phoenix::Color_obj::__new(((Float)0.23),((Float)0.53),((Float)0.53),null());		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(48)
 		::phoenix::Renderer tmp1 = ::Luxe_obj::renderer;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(46)
+		HX_STACK_LINE(48)
 		tmp1->clear_color = tmp;
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(50)
 		::luxe::Input tmp2 = ::Luxe_obj::input;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(50)
 		tmp2->bind_key(HX_HCSTRING("left","\x07","\x08","\xb0","\x47"),(int)97);
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(51)
 		::luxe::Input tmp3 = ::Luxe_obj::input;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(51)
 		int tmp4 = ::snow::systems::input::Keycodes_obj::left;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(51)
 		tmp3->bind_key(HX_HCSTRING("left","\x07","\x08","\xb0","\x47"),tmp4);
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(52)
 		::luxe::Input tmp5 = ::Luxe_obj::input;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(52)
 		tmp5->bind_key(HX_HCSTRING("right","\xdc","\x0b","\x64","\xe9"),(int)100);
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(53)
 		::luxe::Input tmp6 = ::Luxe_obj::input;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(53)
 		int tmp7 = ::snow::systems::input::Keycodes_obj::right;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(53)
 		tmp6->bind_key(HX_HCSTRING("right","\xdc","\x0b","\x64","\xe9"),tmp7);
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(54)
 		::luxe::Input tmp8 = ::Luxe_obj::input;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(54)
 		tmp8->bind_key(HX_HCSTRING("jump","\xee","\xc4","\x69","\x46"),(int)32);
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(55)
 		::luxe::Input tmp9 = ::Luxe_obj::input;		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(55)
 		int tmp10 = ::snow::systems::input::Keycodes_obj::up;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(55)
 		tmp9->bind_key(HX_HCSTRING("jump","\xee","\xc4","\x69","\x46"),tmp10);
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(57)
 		::World tmp11 = ::World_obj::__new();		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(57)
 		::Main_obj::world = tmp11;
-		HX_STACK_LINE(57)
-		::luxe::Camera tmp12 = ::Luxe_obj::camera;		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(57)
-		tmp12->set_zoom((int)2);
 		HX_STACK_LINE(59)
+		::luxe::Camera tmp12 = ::Luxe_obj::camera;		HX_STACK_VAR(tmp12,"tmp12");
+		HX_STACK_LINE(59)
+		tmp12->set_zoom((int)4);
+		HX_STACK_LINE(61)
 		this->loaded = true;
 	}
 return null();
@@ -272,16 +298,16 @@ HX_DEFINE_DYNAMIC_FUNC1(Main_obj,onassetsloaded,(void))
 
 Void Main_obj::onkeyup( ::luxe::KeyEvent e){
 {
-		HX_STACK_FRAME("Main","onkeyup",0x46406b26,"Main.onkeyup","Main.hx",63,0x087e5c05)
+		HX_STACK_FRAME("Main","onkeyup",0x46406b26,"Main.onkeyup","Main.hx",65,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(e,"e")
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(66)
 		bool tmp = (e->keycode == (int)27);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(66)
 		if ((tmp)){
-			HX_STACK_LINE(66)
+			HX_STACK_LINE(68)
 			::luxe::Engine tmp1 = ::Luxe_obj::core;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(66)
+			HX_STACK_LINE(68)
 			tmp1->shutdown();
 		}
 	}
@@ -291,25 +317,25 @@ return null();
 
 Void Main_obj::update( Float dt){
 {
-		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",71,0x087e5c05)
+		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",73,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(dt,"dt")
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(74)
 		bool tmp = this->loaded;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(74)
 		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(74)
 		if ((tmp1)){
-			HX_STACK_LINE(72)
+			HX_STACK_LINE(74)
 			return null();
 		}
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		::luxe::Camera tmp2 = ::Luxe_obj::camera;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		::World tmp3 = ::Main_obj::world;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		::phoenix::Vector tmp4 = tmp3->player->get_pos();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		tmp2->set_center(tmp4);
 	}
 return null();

@@ -27,7 +27,9 @@ class Main extends luxe.Game
             texts: [{id: "assets/maps/test/Gameplay_Testing.tmx"}],
             textures: [
                 {id: "assets/textures/Tileset_Editor.png"},
-                {id: "assets/textures/Creature_Player.png"}
+                {id: "assets/textures/Tileset_Mansion.png"},
+                {id: "assets/textures/Creature_Player.png"},
+                {id: "assets/textures/Creature_Soldier.png"}
             ],
             jsons: [{id: "assets/animations/Creature_Player.json"}]
         });
@@ -43,7 +45,7 @@ class Main extends luxe.Game
 
     function onassetsloaded(_)
     {
-        Luxe.renderer.clear_color = new Color(0.85, 0.85, 0.85);
+        Luxe.renderer.clear_color = new Color(0.23, 0.53, 0.53);
 
         Luxe.input.bind_key("left", Key.key_a);
         Luxe.input.bind_key("left", Key.left);
@@ -54,7 +56,7 @@ class Main extends luxe.Game
 
         world = new World();
 
-        Luxe.camera.zoom = 2;
+        Luxe.camera.zoom = 4;
 
         loaded = true;
     }

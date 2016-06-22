@@ -31,6 +31,8 @@ class Creature extends luxe.Sprite
 			size: _size
 		});
 
+		geometry.translate(new Vector(0, -delta));
+
 		// setup collision
 		add(collider = new BoxCollider({
 			name: "collider",
@@ -41,5 +43,15 @@ class Creature extends luxe.Sprite
 		body = collider.body;
 		body.cbTypes.add(World.CBTYPE_CREATURE);
 		body.userData.entity = this;
+	}
+
+	public function set_animation(anim_name:String)
+	{
+		if (animation == null) return;
+
+		if (animation.animation != anim_name)
+		{
+			animation.animation = anim_name;
+		}
 	}
 }

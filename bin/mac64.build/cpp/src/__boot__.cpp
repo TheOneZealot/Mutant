@@ -1782,6 +1782,9 @@
 #ifndef INCLUDED_haxe_CallStack
 #include <haxe/CallStack.h>
 #endif
+#ifndef INCLUDED_creatures_Soldier
+#include <creatures/Soldier.h>
+#endif
 #ifndef INCLUDED_creatures_Player
 #include <creatures/Player.h>
 #endif
@@ -2479,6 +2482,7 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::_Int64::Int64_Impl__obj::__register();
 ::haxe::IMap_obj::__register();
 ::haxe::CallStack_obj::__register();
+::creatures::Soldier_obj::__register();
 ::creatures::Player_obj::__register();
 ::cpp::vm::Gc_obj::__register();
 ::zpp_nape::util::ZNPList_ZPP_CbSet_obj::__register();

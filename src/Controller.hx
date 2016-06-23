@@ -57,7 +57,6 @@ class Controller extends luxe.Component
 
 	override function onadded()
 	{
-		body.allowRotation = false;
 	}
 
 	override function update(dt:Float)

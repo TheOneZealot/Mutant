@@ -43,6 +43,7 @@ class Creature extends luxe.Sprite
 		body = collider.body;
 		body.cbTypes.add(World.CBTYPE_CREATURE);
 		body.userData.entity = this;
+		body.allowRotation = false;
 	}
 
 	public function set_animation(anim_name:String)

@@ -63,6 +63,9 @@
 #ifndef INCLUDED_phoenix_geometry_Geometry
 #include <phoenix/geometry/Geometry.h>
 #endif
+#ifndef INCLUDED_zpp_nape_phys_ZPP_Body
+#include <zpp_nape/phys/ZPP_Body.h>
+#endif
 #ifndef INCLUDED_zpp_nape_phys_ZPP_Interactor
 #include <zpp_nape/phys/ZPP_Interactor.h>
 #endif
@@ -270,6 +273,41 @@ HX_STACK_ARG(_bounds,"_bounds")
 	}
 	HX_STACK_LINE(45)
 	tmp10->__FieldRef(HX_HCSTRING("entity","\x23","\x13","\x1c","\x05")) = hx::ObjectPtr<OBJ_>(this);
+	HX_STACK_LINE(46)
+	{
+		HX_STACK_LINE(46)
+		::nape::phys::Body tmp11 = this->body;		HX_STACK_VAR(tmp11,"tmp11");
+		HX_STACK_LINE(46)
+		::nape::phys::Body _this = tmp11;		HX_STACK_VAR(_this,"_this");
+		HX_STACK_LINE(46)
+		{
+			HX_STACK_LINE(46)
+			::String tmp12 = HX_HCSTRING("false","\xa3","\x35","\x4f","\xfb");		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(46)
+			::String tmp13 = (HX_HCSTRING("Body::","\x02","\x8e","\x7d","\x8f") + tmp12);		HX_STACK_VAR(tmp13,"tmp13");
+			HX_STACK_LINE(46)
+			_this->zpp_inner->immutable_midstep(tmp13);
+			HX_STACK_LINE(46)
+			bool tmp14 = _this->zpp_inner->norotate;		HX_STACK_VAR(tmp14,"tmp14");
+			HX_STACK_LINE(46)
+			bool tmp15 = !(tmp14);		HX_STACK_VAR(tmp15,"tmp15");
+			HX_STACK_LINE(46)
+			bool tmp16 = (tmp15 != false);		HX_STACK_VAR(tmp16,"tmp16");
+			HX_STACK_LINE(46)
+			if ((tmp16)){
+				HX_STACK_LINE(46)
+				bool tmp17 = true;		HX_STACK_VAR(tmp17,"tmp17");
+				HX_STACK_LINE(46)
+				_this->zpp_inner->norotate = tmp17;
+				HX_STACK_LINE(46)
+				_this->zpp_inner->invalidate_inertia();
+			}
+		}
+		HX_STACK_LINE(46)
+		bool tmp12 = _this->zpp_inner->norotate;		HX_STACK_VAR(tmp12,"tmp12");
+		HX_STACK_LINE(46)
+		!(tmp12);
+	}
 }
 ;
 	return null();
@@ -290,33 +328,33 @@ Dynamic Creature_obj::__Create(hx::DynamicArray inArgs)
 
 Void Creature_obj::set_animation( ::String anim_name){
 {
-		HX_STACK_FRAME("Creature","set_animation",0x44adea18,"Creature.set_animation","Creature.hx",49,0xc6ca163f)
+		HX_STACK_FRAME("Creature","set_animation",0x44adea18,"Creature.set_animation","Creature.hx",50,0xc6ca163f)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(anim_name,"anim_name")
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(51)
 		::luxe::components::sprite::SpriteAnimation tmp = this->animation;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(51)
 		bool tmp1 = (tmp == null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(51)
 		if ((tmp1)){
-			HX_STACK_LINE(50)
+			HX_STACK_LINE(51)
 			return null();
 		}
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		::luxe::components::sprite::SpriteAnimation tmp2 = this->animation;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		::String tmp3 = tmp2->animation;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		::String tmp4 = anim_name;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		bool tmp5 = (tmp3 != tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		if ((tmp5)){
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(55)
 			::luxe::components::sprite::SpriteAnimation tmp6 = this->animation;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(55)
 			::String tmp7 = anim_name;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(55)
 			tmp6->set_animation(tmp7);
 		}
 	}

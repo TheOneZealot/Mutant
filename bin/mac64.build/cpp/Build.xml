@@ -6194,6 +6194,7 @@
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/phoenix/Vector.h"/>
    <depend name="include/phoenix/geometry/Geometry.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
    <depend name="include/zpp_nape/util/ZPP_CbTypeList.h"/>
    <depend name="include/zpp_nape/util/ZPP_Flags.h"/>

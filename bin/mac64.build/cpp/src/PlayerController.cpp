@@ -67,25 +67,25 @@ Void PlayerController_obj::update( Float dt){
 		bool tmp3 = tmp2->inputdown(HX_HCSTRING("left","\x07","\x08","\xb0","\x47"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(18)
 		if ((tmp3)){
-			HX_STACK_LINE(21)
+			HX_STACK_LINE(20)
 			::nape::geom::Vec2 tmp4 = ::nape::geom::Vec2_obj::__new((int)-1,(int)0);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(21)
+			HX_STACK_LINE(20)
 			this->add_movement_input(tmp4);
 		}
-		HX_STACK_LINE(23)
+		HX_STACK_LINE(22)
 		::luxe::Input tmp4 = ::Luxe_obj::input;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(23)
+		HX_STACK_LINE(22)
 		bool tmp5 = tmp4->inputdown(HX_HCSTRING("right","\xdc","\x0b","\x64","\xe9"));		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(23)
+		HX_STACK_LINE(22)
 		if ((tmp5)){
-			HX_STACK_LINE(26)
+			HX_STACK_LINE(24)
 			::nape::geom::Vec2 tmp6 = ::nape::geom::Vec2_obj::__new((int)1,(int)0);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(26)
+			HX_STACK_LINE(24)
 			this->add_movement_input(tmp6);
 		}
-		HX_STACK_LINE(29)
+		HX_STACK_LINE(27)
 		Float tmp6 = dt;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(29)
+		HX_STACK_LINE(27)
 		this->super::update(tmp6);
 	}
 return null();

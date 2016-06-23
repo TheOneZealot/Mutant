@@ -17,15 +17,13 @@ class PlayerController extends Controller
 
 		if (Luxe.input.inputdown("left"))
 		{
-			//move(-1);
 			add_movement_input(new Vec2(-1, 0));
 		}
 		if (Luxe.input.inputdown("right"))
 		{
-			//move(1);
 			add_movement_input(new Vec2(1, 0));
 		}
-		
+
 		super.update(dt);
 	}
 }

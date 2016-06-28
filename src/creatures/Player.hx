@@ -24,7 +24,7 @@ class Player extends Creature
 		animation.play();
 
 		// setup controller
-		add(controller = new PlayerController());
+		add(controller = new controllers.PlayerController());
 		controller.acceleration = 2048;
 		controller.max_speed = 128;
 		controller.jump_impulse = 256;

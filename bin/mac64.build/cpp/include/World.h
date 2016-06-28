@@ -15,6 +15,8 @@ HX_DECLARE_CLASS3(luxe,importers,tiled,TiledMap)
 HX_DECLARE_CLASS3(luxe,physics,nape,DebugDraw)
 HX_DECLARE_CLASS2(luxe,tilemaps,Tilemap)
 HX_DECLARE_CLASS2(nape,callbacks,CbType)
+HX_DECLARE_CLASS2(nape,callbacks,InteractionListener)
+HX_DECLARE_CLASS2(nape,callbacks,Listener)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 
@@ -48,6 +50,8 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public hx::Object{
 		static void __boot();
 		static ::nape::callbacks::CbType CBTYPE_TERRAIN;
 		static ::nape::callbacks::CbType CBTYPE_CREATURE;
+		static ::nape::callbacks::CbType CBTYPE_PROJECTILE;
+		static ::nape::callbacks::InteractionListener projectile_begin_interaction_listener;
 		static ::luxe::physics::nape::DebugDraw debugdraw;
 		::luxe::importers::tiled::TiledMap map;
 		::nape::phys::Body map_static;

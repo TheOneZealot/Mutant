@@ -110,7 +110,7 @@ HX_STACK_ARG(_host,"_host")
 	HX_STACK_LINE(62)
 	this->shutting_down = false;
 	HX_STACK_LINE(59)
-	this->debug = true;
+	this->debug = false;
 	HX_STACK_LINE(54)
 	this->platform = HX_HCSTRING("unknown","\x8a","\x23","\x7b","\xe1");
 	HX_STACK_LINE(28)

@@ -20,6 +20,7 @@ class World
 {
 	public static var CBTYPE_TERRAIN = new CbType();
 	public static var CBTYPE_CREATURE = new CbType();
+	public static var CBTYPE_PROJECTILE = new CbType();
 
 	public static var debugdraw:DebugDraw;
 
@@ -87,11 +88,12 @@ class World
 				{
 					case "Spawn":
 						var creature_name:String = object.properties.get("Creature");
+						var creature_facing_left:Bool = object.properties.get("Facing Left") == "true";
 						var body_pos:Vector = object.pos.add(new Vector(object.width, object.height).divideScalar(2));
 						var creature:Creature = Type.createInstance(
 							Type.resolveClass("creatures."+creature_name), 
 							[body_pos, object.name]);
-						trace(Type.resolveClass("creatures.Player"));
+						creature.flipx = creature_facing_left;
 						if (creature_name == "Player")
 						{
 							player = creature;
@@ -117,7 +119,7 @@ class World
 		}
 		debugdraw = new DebugDraw();
 		Luxe.physics.nape.debugdraw = debugdraw;
-		Luxe.physics.nape.draw = false;
+		Luxe.physics.nape.draw = true;
 
 		generate_collision();
 		generate_objects();

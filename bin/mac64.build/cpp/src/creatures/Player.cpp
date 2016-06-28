@@ -10,8 +10,8 @@
 #ifndef INCLUDED_Luxe
 #include <Luxe.h>
 #endif
-#ifndef INCLUDED_PlayerController
-#include <PlayerController.h>
+#ifndef INCLUDED_controllers_PlayerController
+#include <controllers/PlayerController.h>
 #endif
 #ifndef INCLUDED_creatures_Player
 #include <creatures/Player.h>
@@ -180,7 +180,7 @@ HX_STACK_ARG(_name,"_name")
 	HX_STACK_LINE(27)
 	{
 		HX_STACK_LINE(27)
-		::PlayerController tmp17 = ::PlayerController_obj::__new();		HX_STACK_VAR(tmp17,"tmp17");
+		::controllers::PlayerController tmp17 = ::controllers::PlayerController_obj::__new();		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(27)
 		::Controller tmp18 = this->controller = tmp17;		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(27)

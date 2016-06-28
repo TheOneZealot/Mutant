@@ -8,6 +8,7 @@ import nape.phys.BodyType;
 import nape.phys.Body;
 import nape.shape.Polygon;
 import nape.shape.Circle;
+import nape.shape.Shape;
 import nape.geom.Vec2;
 
 class Creature extends luxe.Sprite
@@ -41,6 +42,7 @@ class Creature extends luxe.Sprite
 			body_type: BodyType.KINEMATIC
 		}));
 		body = collider.body;
+		body.shapes.foreach(function(shape:Shape) { shape.sensorEnabled = true; });
 		body.cbTypes.add(World.CBTYPE_CREATURE);
 		body.userData.entity = this;
 		body.allowRotation = false;

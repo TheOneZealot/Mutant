@@ -26,7 +26,7 @@ class Controller extends luxe.Component
 	public var max_speed:Float;
 	public var jump_impulse:Float;
 	public var max_slope_angle:Float;
-	var max_slope_y:Float;
+	public var max_slope_y:Float;
 
 	public var creature(get, null):Creature;
 	public var body(get, null):Body;
@@ -55,9 +55,7 @@ class Controller extends luxe.Component
 		max_slope_y = -Math.cos(Maths.radians(max_slope_angle));
 	}
 
-	override function onadded()
-	{
-	}
+	override function onadded() { }
 
 	override function update(dt:Float)
 	{

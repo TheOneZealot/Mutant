@@ -678,6 +678,9 @@
 #ifndef INCLUDED_Sys
 #include <Sys.h>
 #endif
+#ifndef INCLUDED_Projectile
+#include <Projectile.h>
+#endif
 #ifndef INCLUDED_EReg
 #include <EReg.h>
 #endif
@@ -1791,6 +1794,12 @@
 #ifndef INCLUDED_cpp_vm_Gc
 #include <cpp/vm/Gc.h>
 #endif
+#ifndef INCLUDED_controllers_SoldierController
+#include <controllers/SoldierController.h>
+#endif
+#ifndef INCLUDED_controllers_PlayerController
+#include <controllers/PlayerController.h>
+#endif
 #ifndef INCLUDED_zpp_nape_util_ZNPList_ZPP_CbSet
 #include <zpp_nape/util/ZNPList_ZPP_CbSet.h>
 #endif
@@ -1826,9 +1835,6 @@
 #endif
 #ifndef INCLUDED_Reflect
 #include <Reflect.h>
-#endif
-#ifndef INCLUDED_PlayerController
-#include <PlayerController.h>
 #endif
 #ifndef INCLUDED_Main
 #include <Main.h>
@@ -1871,6 +1877,9 @@
 #endif
 #ifndef INCLUDED_luxe_Emitter
 #include <luxe/Emitter.h>
+#endif
+#ifndef INCLUDED_AIController
+#include <AIController.h>
 #endif
 #ifndef INCLUDED_Controller
 #include <Controller.h>
@@ -2114,6 +2123,7 @@ hx::RegisterResources( hx::GetResources() );
 ::zpp_nape::ZPP_ID_obj::__register();
 ::zpp_nape::callbacks::ZPP_CbType_obj::__register();
 ::Sys_obj::__register();
+::Projectile_obj::__register();
 ::EReg_obj::__register();
 ::zpp_nape::util::ZPP_Math_obj::__register();
 ::zpp_nape::util::ZPP_MixVec2List_obj::__register();
@@ -2485,6 +2495,8 @@ hx::RegisterResources( hx::GetResources() );
 ::creatures::Soldier_obj::__register();
 ::creatures::Player_obj::__register();
 ::cpp::vm::Gc_obj::__register();
+::controllers::SoldierController_obj::__register();
+::controllers::PlayerController_obj::__register();
 ::zpp_nape::util::ZNPList_ZPP_CbSet_obj::__register();
 ::zpp_nape::util::ZNPList_ZPP_Interactor_obj::__register();
 ::zpp_nape::util::ZNPList_ZPP_Constraint_obj::__register();
@@ -2497,7 +2509,6 @@ hx::RegisterResources( hx::GetResources() );
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
 ::Reflect_obj::__register();
-::PlayerController_obj::__register();
 ::Main_obj::__register();
 ::luxe::Game_obj::__register();
 ::Luxe_obj::__register();
@@ -2512,6 +2523,7 @@ hx::RegisterResources( hx::GetResources() );
 ::luxe::Entity_obj::__register();
 ::luxe::Objects_obj::__register();
 ::luxe::Emitter_obj::__register();
+::AIController_obj::__register();
 ::Controller_obj::__register();
 ::luxe::Component_obj::__register();
 ::luxe::ID_obj::__register();
@@ -2544,6 +2556,7 @@ hx::RegisterResources( hx::GetResources() );
 ::hxcpp::StaticZlib_obj::__init__();
 ::EReg_obj::__boot();
 ::haxe::Log_obj::__boot();
+::Projectile_obj::__boot();
 ::Sys_obj::__boot();
 ::zpp_nape::callbacks::ZPP_CbType_obj::__boot();
 ::zpp_nape::ZPP_ID_obj::__boot();

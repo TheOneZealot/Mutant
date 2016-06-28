@@ -1,5 +1,9 @@
 #include <hxcpp.h>
 
+#include "hxMath.h"
+#ifndef INCLUDED_AIController
+#include <AIController.h>
+#endif
 #ifndef INCLUDED_Controller
 #include <Controller.h>
 #endif
@@ -8,6 +12,9 @@
 #endif
 #ifndef INCLUDED_Luxe
 #include <Luxe.h>
+#endif
+#ifndef INCLUDED_controllers_SoldierController
+#include <controllers/SoldierController.h>
 #endif
 #ifndef INCLUDED_creatures_Soldier
 #include <creatures/Soldier.h>
@@ -27,6 +34,9 @@
 #ifndef INCLUDED_luxe_Entity
 #include <luxe/Entity.h>
 #endif
+#ifndef INCLUDED_luxe_Events
+#include <luxe/Events.h>
+#endif
 #ifndef INCLUDED_luxe_ID
 #include <luxe/ID.h>
 #endif
@@ -45,11 +55,23 @@
 #ifndef INCLUDED_luxe_components_Components
 #include <luxe/components/Components.h>
 #endif
+#ifndef INCLUDED_luxe_components_sprite_SpriteAnimation
+#include <luxe/components/sprite/SpriteAnimation.h>
+#endif
 #ifndef INCLUDED_luxe_resource_JSONResource
 #include <luxe/resource/JSONResource.h>
 #endif
 #ifndef INCLUDED_luxe_resource_Resource
 #include <luxe/resource/Resource.h>
+#endif
+#ifndef INCLUDED_nape_geom_Vec2
+#include <nape/geom/Vec2.h>
+#endif
+#ifndef INCLUDED_nape_phys_Body
+#include <nape/phys/Body.h>
+#endif
+#ifndef INCLUDED_nape_phys_Interactor
+#include <nape/phys/Interactor.h>
 #endif
 #ifndef INCLUDED_phoenix_Texture
 #include <phoenix/Texture.h>
@@ -63,6 +85,15 @@
 #ifndef INCLUDED_snow_systems_assets_AssetJSON
 #include <snow/systems/assets/AssetJSON.h>
 #endif
+#ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
+#include <zpp_nape/geom/ZPP_Vec2.h>
+#endif
+#ifndef INCLUDED_zpp_nape_phys_ZPP_Body
+#include <zpp_nape/phys/ZPP_Body.h>
+#endif
+#ifndef INCLUDED_zpp_nape_phys_ZPP_Interactor
+#include <zpp_nape/phys/ZPP_Interactor.h>
+#endif
 namespace creatures{
 
 Void Soldier_obj::__construct(::phoenix::Vector _pos,::String _name)
@@ -72,10 +103,12 @@ HX_STACK_THIS(this)
 HX_STACK_ARG(_pos,"_pos")
 HX_STACK_ARG(_name,"_name")
 {
+	HX_STACK_LINE(9)
+	::creatures::Soldier _g = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g,"_g");
 	HX_STACK_LINE(12)
 	::luxe::Resources tmp = ::Luxe_obj::resources;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(12)
-	::luxe::resource::Resource tmp1 = tmp->cache->get(HX_HCSTRING("assets/animations/Creature_Player.json","\x29","\x20","\x7c","\x05"));		HX_STACK_VAR(tmp1,"tmp1");
+	::luxe::resource::Resource tmp1 = tmp->cache->get(HX_HCSTRING("assets/animations/Creature_Soldier.json","\x40","\xb2","\xdb","\x6a"));		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(12)
 	::snow::systems::assets::AssetJSON tmp2 = ((::luxe::resource::JSONResource)(tmp1))->asset;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(12)
@@ -106,35 +139,97 @@ HX_STACK_ARG(_name,"_name")
 	int tmp12 = tmp11->set_filter_mag((int)9728);		HX_STACK_VAR(tmp12,"tmp12");
 	HX_STACK_LINE(17)
 	tmp10->set_filter_min(tmp12);
+	HX_STACK_LINE(20)
+	{
+		struct _Function_2_1{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","creatures/Soldier.hx",20,0x1640b437)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("name","\x4b","\x72","\xff","\x48") , HX_HCSTRING("animation","\x04","\xef","\x34","\x4b"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(20)
+		Dynamic tmp13 = _Function_2_1::Block();		HX_STACK_VAR(tmp13,"tmp13");
+		HX_STACK_LINE(20)
+		::luxe::components::sprite::SpriteAnimation tmp14 = ::luxe::components::sprite::SpriteAnimation_obj::__new(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
+		HX_STACK_LINE(20)
+		::luxe::components::sprite::SpriteAnimation tmp15 = this->animation = tmp14;		HX_STACK_VAR(tmp15,"tmp15");
+		HX_STACK_LINE(20)
+		::luxe::components::sprite::SpriteAnimation _component = tmp15;		HX_STACK_VAR(_component,"_component");
+		HX_STACK_LINE(20)
+		(this->component_count)++;
+		HX_STACK_LINE(20)
+		::luxe::components::Components tmp16 = this->_components;		HX_STACK_VAR(tmp16,"tmp16");
+		HX_STACK_LINE(20)
+		::luxe::components::sprite::SpriteAnimation tmp17 = _component;		HX_STACK_VAR(tmp17,"tmp17");
+		HX_STACK_LINE(20)
+		tmp16->add(tmp17);
+	}
+	HX_STACK_LINE(21)
+	::luxe::components::sprite::SpriteAnimation tmp13 = this->animation;		HX_STACK_VAR(tmp13,"tmp13");
+	HX_STACK_LINE(21)
+	Dynamic tmp14 = anim_object;		HX_STACK_VAR(tmp14,"tmp14");
+	HX_STACK_LINE(21)
+	tmp13->add_from_json_object(tmp14);
+	HX_STACK_LINE(22)
+	::luxe::components::sprite::SpriteAnimation tmp15 = this->animation;		HX_STACK_VAR(tmp15,"tmp15");
+	HX_STACK_LINE(22)
+	tmp15->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
+	HX_STACK_LINE(23)
+	::luxe::components::sprite::SpriteAnimation tmp16 = this->animation;		HX_STACK_VAR(tmp16,"tmp16");
+	HX_STACK_LINE(23)
+	tmp16->play();
 	HX_STACK_LINE(26)
 	{
 		HX_STACK_LINE(26)
-		::Controller tmp13 = ::Controller_obj::__new();		HX_STACK_VAR(tmp13,"tmp13");
+		::controllers::SoldierController tmp17 = ::controllers::SoldierController_obj::__new();		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(26)
-		::Controller tmp14 = this->controller = tmp13;		HX_STACK_VAR(tmp14,"tmp14");
+		::Controller tmp18 = this->controller = tmp17;		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(26)
-		::Controller _component = tmp14;		HX_STACK_VAR(_component,"_component");
+		::Controller _component = tmp18;		HX_STACK_VAR(_component,"_component");
 		HX_STACK_LINE(26)
 		(this->component_count)++;
 		HX_STACK_LINE(26)
-		::luxe::components::Components tmp15 = this->_components;		HX_STACK_VAR(tmp15,"tmp15");
+		::luxe::components::Components tmp19 = this->_components;		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(26)
-		::Controller tmp16 = _component;		HX_STACK_VAR(tmp16,"tmp16");
+		::Controller tmp20 = _component;		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(26)
-		tmp15->add(tmp16);
+		tmp19->add(tmp20);
 	}
 	HX_STACK_LINE(27)
-	::Controller tmp13 = this->controller;		HX_STACK_VAR(tmp13,"tmp13");
+	::Controller tmp17 = this->controller;		HX_STACK_VAR(tmp17,"tmp17");
 	HX_STACK_LINE(27)
-	tmp13->acceleration = (int)2048;
+	tmp17->acceleration = (int)2048;
 	HX_STACK_LINE(28)
-	::Controller tmp14 = this->controller;		HX_STACK_VAR(tmp14,"tmp14");
+	::Controller tmp18 = this->controller;		HX_STACK_VAR(tmp18,"tmp18");
 	HX_STACK_LINE(28)
-	tmp14->max_speed = (int)128;
+	tmp18->max_speed = (int)128;
 	HX_STACK_LINE(29)
-	::Controller tmp15 = this->controller;		HX_STACK_VAR(tmp15,"tmp15");
+	::Controller tmp19 = this->controller;		HX_STACK_VAR(tmp19,"tmp19");
 	HX_STACK_LINE(29)
-	tmp15->jump_impulse = (int)256;
+	tmp19->jump_impulse = (int)256;
+	HX_STACK_LINE(32)
+	::luxe::Events tmp20 = this->events;		HX_STACK_VAR(tmp20,"tmp20");
+
+	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,::creatures::Soldier,_g)
+	int __ArgCount() const { return 1; }
+	Void run(Dynamic _){
+		HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","creatures/Soldier.hx",32,0x1640b437)
+		HX_STACK_ARG(_,"_")
+		{
+			HX_STACK_LINE(32)
+			_g->set_animation(HX_HCSTRING("fire","\xb6","\xd3","\xbb","\x43"));
+		}
+		return null();
+	}
+	HX_END_LOCAL_FUNC1((void))
+
+	HX_STACK_LINE(32)
+	tmp20->listen(HX_HCSTRING("fire","\xb6","\xd3","\xbb","\x43"), Dynamic(new _Function_1_1(_g)));
 }
 ;
 	return null();
@@ -155,9 +250,341 @@ Dynamic Soldier_obj::__Create(hx::DynamicArray inArgs)
 
 Void Soldier_obj::update( Float dt){
 {
-		HX_STACK_FRAME("creatures.Soldier","update",0x468b5eef,"creatures.Soldier.update","creatures/Soldier.hx",33,0x1640b437)
+		HX_STACK_FRAME("creatures.Soldier","update",0x468b5eef,"creatures.Soldier.update","creatures/Soldier.hx",36,0x1640b437)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(dt,"dt")
+		HX_STACK_LINE(38)
+		Float tmp;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(38)
+		{
+			HX_STACK_LINE(38)
+			::nape::geom::Vec2 tmp1;		HX_STACK_VAR(tmp1,"tmp1");
+			HX_STACK_LINE(38)
+			{
+				HX_STACK_LINE(38)
+				::Controller tmp2 = this->controller;		HX_STACK_VAR(tmp2,"tmp2");
+				HX_STACK_LINE(38)
+				::nape::phys::Body tmp3 = tmp2->get_body();		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(38)
+				::nape::phys::Body _this = tmp3;		HX_STACK_VAR(_this,"_this");
+				HX_STACK_LINE(38)
+				::nape::geom::Vec2 tmp4 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(38)
+				bool tmp5 = (tmp4 == null());		HX_STACK_VAR(tmp5,"tmp5");
+				HX_STACK_LINE(38)
+				if ((tmp5)){
+					HX_STACK_LINE(38)
+					_this->zpp_inner->setupVelocity();
+				}
+				HX_STACK_LINE(38)
+				tmp1 = _this->zpp_inner->wrap_vel;
+			}
+			HX_STACK_LINE(38)
+			::nape::geom::Vec2 _this = tmp1;		HX_STACK_VAR(_this,"_this");
+			HX_STACK_LINE(38)
+			{
+				HX_STACK_LINE(38)
+				bool tmp2 = (_this != null());		HX_STACK_VAR(tmp2,"tmp2");
+				HX_STACK_LINE(38)
+				bool tmp3;		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(38)
+				if ((tmp2)){
+					HX_STACK_LINE(38)
+					tmp3 = _this->zpp_disp;
+				}
+				else{
+					HX_STACK_LINE(38)
+					tmp3 = false;
+				}
+				HX_STACK_LINE(38)
+				if ((tmp3)){
+					HX_STACK_LINE(38)
+					::String tmp4 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(38)
+					::String tmp5 = (tmp4 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(38)
+					HX_STACK_DO_THROW(tmp5);
+				}
+			}
+			HX_STACK_LINE(38)
+			{
+				HX_STACK_LINE(38)
+				::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+				HX_STACK_LINE(38)
+				bool tmp2 = (_this1->_validate != null());		HX_STACK_VAR(tmp2,"tmp2");
+				HX_STACK_LINE(38)
+				if ((tmp2)){
+					HX_STACK_LINE(38)
+					_this1->_validate();
+				}
+			}
+			HX_STACK_LINE(38)
+			tmp = _this->zpp_inner->x;
+		}
+		HX_STACK_LINE(38)
+		bool tmp1 = (tmp > (int)0);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(38)
+		if ((tmp1)){
+			HX_STACK_LINE(38)
+			this->set_flipx(false);
+		}
+		else{
+			HX_STACK_LINE(39)
+			Float tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(39)
+			{
+				HX_STACK_LINE(39)
+				::nape::geom::Vec2 tmp3;		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(39)
+				{
+					HX_STACK_LINE(39)
+					::Controller tmp4 = this->controller;		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(39)
+					::nape::phys::Body tmp5 = tmp4->get_body();		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(39)
+					::nape::phys::Body _this = tmp5;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(39)
+					::nape::geom::Vec2 tmp6 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp6,"tmp6");
+					HX_STACK_LINE(39)
+					bool tmp7 = (tmp6 == null());		HX_STACK_VAR(tmp7,"tmp7");
+					HX_STACK_LINE(39)
+					if ((tmp7)){
+						HX_STACK_LINE(39)
+						_this->zpp_inner->setupVelocity();
+					}
+					HX_STACK_LINE(39)
+					tmp3 = _this->zpp_inner->wrap_vel;
+				}
+				HX_STACK_LINE(39)
+				::nape::geom::Vec2 _this = tmp3;		HX_STACK_VAR(_this,"_this");
+				HX_STACK_LINE(39)
+				{
+					HX_STACK_LINE(39)
+					bool tmp4 = (_this != null());		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(39)
+					bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(39)
+					if ((tmp4)){
+						HX_STACK_LINE(39)
+						tmp5 = _this->zpp_disp;
+					}
+					else{
+						HX_STACK_LINE(39)
+						tmp5 = false;
+					}
+					HX_STACK_LINE(39)
+					if ((tmp5)){
+						HX_STACK_LINE(39)
+						::String tmp6 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp6,"tmp6");
+						HX_STACK_LINE(39)
+						::String tmp7 = (tmp6 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp7,"tmp7");
+						HX_STACK_LINE(39)
+						HX_STACK_DO_THROW(tmp7);
+					}
+				}
+				HX_STACK_LINE(39)
+				{
+					HX_STACK_LINE(39)
+					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+					HX_STACK_LINE(39)
+					bool tmp4 = (_this1->_validate != null());		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(39)
+					if ((tmp4)){
+						HX_STACK_LINE(39)
+						_this1->_validate();
+					}
+				}
+				HX_STACK_LINE(39)
+				tmp2 = _this->zpp_inner->x;
+			}
+			HX_STACK_LINE(39)
+			bool tmp3 = (tmp2 < (int)0);		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(39)
+			if ((tmp3)){
+				HX_STACK_LINE(39)
+				this->set_flipx(true);
+			}
+		}
+		HX_STACK_LINE(42)
+		::luxe::components::sprite::SpriteAnimation tmp2 = this->animation;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(42)
+		bool tmp3 = tmp2->playing;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(42)
+		bool tmp4 = (tmp3 == false);		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(42)
+		if ((tmp4)){
+			HX_STACK_LINE(44)
+			this->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
+		}
+		else{
+			HX_STACK_LINE(46)
+			::Controller tmp5 = this->controller;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(46)
+			bool tmp6 = tmp5->grounded;		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(46)
+			if ((tmp6)){
+				HX_STACK_LINE(48)
+				Float tmp7;		HX_STACK_VAR(tmp7,"tmp7");
+				HX_STACK_LINE(48)
+				{
+					HX_STACK_LINE(48)
+					::nape::geom::Vec2 tmp8;		HX_STACK_VAR(tmp8,"tmp8");
+					HX_STACK_LINE(48)
+					{
+						HX_STACK_LINE(48)
+						::Controller tmp9 = this->controller;		HX_STACK_VAR(tmp9,"tmp9");
+						HX_STACK_LINE(48)
+						::nape::phys::Body tmp10 = tmp9->get_body();		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(48)
+						::nape::phys::Body _this = tmp10;		HX_STACK_VAR(_this,"_this");
+						HX_STACK_LINE(48)
+						::nape::geom::Vec2 tmp11 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(48)
+						bool tmp12 = (tmp11 == null());		HX_STACK_VAR(tmp12,"tmp12");
+						HX_STACK_LINE(48)
+						if ((tmp12)){
+							HX_STACK_LINE(48)
+							_this->zpp_inner->setupVelocity();
+						}
+						HX_STACK_LINE(48)
+						tmp8 = _this->zpp_inner->wrap_vel;
+					}
+					HX_STACK_LINE(48)
+					::nape::geom::Vec2 _this = tmp8;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(48)
+					{
+						HX_STACK_LINE(48)
+						bool tmp9 = (_this != null());		HX_STACK_VAR(tmp9,"tmp9");
+						HX_STACK_LINE(48)
+						bool tmp10;		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(48)
+						if ((tmp9)){
+							HX_STACK_LINE(48)
+							tmp10 = _this->zpp_disp;
+						}
+						else{
+							HX_STACK_LINE(48)
+							tmp10 = false;
+						}
+						HX_STACK_LINE(48)
+						if ((tmp10)){
+							HX_STACK_LINE(48)
+							::String tmp11 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp11,"tmp11");
+							HX_STACK_LINE(48)
+							::String tmp12 = (tmp11 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(48)
+							HX_STACK_DO_THROW(tmp12);
+						}
+					}
+					HX_STACK_LINE(48)
+					{
+						HX_STACK_LINE(48)
+						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+						HX_STACK_LINE(48)
+						bool tmp9 = (_this1->_validate != null());		HX_STACK_VAR(tmp9,"tmp9");
+						HX_STACK_LINE(48)
+						if ((tmp9)){
+							HX_STACK_LINE(48)
+							_this1->_validate();
+						}
+					}
+					HX_STACK_LINE(48)
+					tmp7 = _this->zpp_inner->x;
+				}
+				HX_STACK_LINE(48)
+				Float tmp8 = ::Math_obj::abs(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+				HX_STACK_LINE(48)
+				bool tmp9 = (tmp8 > (int)16);		HX_STACK_VAR(tmp9,"tmp9");
+				HX_STACK_LINE(48)
+				if ((tmp9)){
+					HX_STACK_LINE(50)
+					this->set_animation(HX_HCSTRING("run","\x4b","\xe7","\x56","\x00"));
+				}
+				else{
+					HX_STACK_LINE(52)
+					Float tmp10;		HX_STACK_VAR(tmp10,"tmp10");
+					HX_STACK_LINE(52)
+					{
+						HX_STACK_LINE(52)
+						::nape::geom::Vec2 tmp11;		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(52)
+						{
+							HX_STACK_LINE(52)
+							::Controller tmp12 = this->controller;		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(52)
+							::nape::phys::Body tmp13 = tmp12->get_body();		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(52)
+							::nape::phys::Body _this = tmp13;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(52)
+							::nape::geom::Vec2 tmp14 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp14,"tmp14");
+							HX_STACK_LINE(52)
+							bool tmp15 = (tmp14 == null());		HX_STACK_VAR(tmp15,"tmp15");
+							HX_STACK_LINE(52)
+							if ((tmp15)){
+								HX_STACK_LINE(52)
+								_this->zpp_inner->setupVelocity();
+							}
+							HX_STACK_LINE(52)
+							tmp11 = _this->zpp_inner->wrap_vel;
+						}
+						HX_STACK_LINE(52)
+						::nape::geom::Vec2 _this = tmp11;		HX_STACK_VAR(_this,"_this");
+						HX_STACK_LINE(52)
+						{
+							HX_STACK_LINE(52)
+							bool tmp12 = (_this != null());		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(52)
+							bool tmp13;		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(52)
+							if ((tmp12)){
+								HX_STACK_LINE(52)
+								tmp13 = _this->zpp_disp;
+							}
+							else{
+								HX_STACK_LINE(52)
+								tmp13 = false;
+							}
+							HX_STACK_LINE(52)
+							if ((tmp13)){
+								HX_STACK_LINE(52)
+								::String tmp14 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp14,"tmp14");
+								HX_STACK_LINE(52)
+								::String tmp15 = (tmp14 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp15,"tmp15");
+								HX_STACK_LINE(52)
+								HX_STACK_DO_THROW(tmp15);
+							}
+						}
+						HX_STACK_LINE(52)
+						{
+							HX_STACK_LINE(52)
+							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+							HX_STACK_LINE(52)
+							bool tmp12 = (_this1->_validate != null());		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(52)
+							if ((tmp12)){
+								HX_STACK_LINE(52)
+								_this1->_validate();
+							}
+						}
+						HX_STACK_LINE(52)
+						tmp10 = _this->zpp_inner->x;
+					}
+					HX_STACK_LINE(52)
+					Float tmp11 = ::Math_obj::abs(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
+					HX_STACK_LINE(52)
+					bool tmp12 = (tmp11 < (int)16);		HX_STACK_VAR(tmp12,"tmp12");
+					HX_STACK_LINE(52)
+					if ((tmp12)){
+						HX_STACK_LINE(54)
+						this->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
+					}
+				}
+			}
+			else{
+				HX_STACK_LINE(59)
+				this->set_animation(HX_HCSTRING("fall","\x7b","\xbc","\xb5","\x43"));
+			}
+		}
 	}
 return null();
 }

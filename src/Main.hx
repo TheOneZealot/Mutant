@@ -24,14 +24,20 @@ class Main extends luxe.Game
     override function ready() 
     {
         var parcel:Parcel = new Parcel({
-            texts: [{id: "assets/maps/test/Gameplay_Testing.tmx"}],
+            texts: [
+                {id: "assets/maps/test/Gameplay_Testing.tmx"}
+            ],
             textures: [
                 {id: "assets/textures/Tileset_Editor.png"},
                 {id: "assets/textures/Tileset_Mansion.png"},
                 {id: "assets/textures/Creature_Player.png"},
-                {id: "assets/textures/Creature_Soldier.png"}
+                {id: "assets/textures/Creature_Soldier.png"},
+                {id: "assets/textures/Projectile_Bullet.png"}
             ],
-            jsons: [{id: "assets/animations/Creature_Player.json"}]
+            jsons: [
+                {id: "assets/animations/Creature_Player.json"},
+                {id: "assets/animations/Creature_Soldier.json"}
+            ]
         });
 
         new ParcelProgress({

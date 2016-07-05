@@ -39,6 +39,8 @@ class HXCPP_CLASS_ATTRIBUTES  SoldierController_obj : public ::AIController_obj{
 		::String __ToString() const { return HX_HCSTRING("SoldierController","\x9e","\xfa","\xbf","\xa3"); }
 
 		bool fire_ready;
+		Float fire_interval;
+		Float fire_ready_timer;
 		virtual Void update( Float dt);
 
 		virtual Void fire( );

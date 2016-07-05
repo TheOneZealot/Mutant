@@ -65,6 +65,8 @@ class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
 		Float acceleration;
 		Float max_speed;
 		Float jump_impulse;
+		Float friction_ground;
+		Float friction_air;
 		Float max_slope_angle;
 		Float max_slope_y;
 		::Creature creature;
@@ -72,6 +74,7 @@ class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
 		::nape::geom::AABB bounds;
 		bool grounded;
 		bool slope;
+		bool jumped_this_frame;
 		::nape::space::Space space;
 		::nape::geom::Vec2 input_vector;
 		int rays_horizontal;

@@ -8,6 +8,7 @@
 #ifndef INCLUDED_Creature
 #include <Creature.h>
 #endif
+HX_DECLARE_CLASS0(Action)
 HX_DECLARE_CLASS0(Creature)
 HX_DECLARE_CLASS1(creatures,Player)
 HX_DECLARE_CLASS1(luxe,Emitter)
@@ -36,9 +37,18 @@ class HXCPP_CLASS_ATTRIBUTES  Player_obj : public ::Creature_obj{
 
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
+		void __GetFields(Array< ::String> &outFields);
 		static void __register();
+		void __Mark(HX_MARK_PARAMS);
+		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Player","\x81","\x5f","\x4d","\x6c"); }
 
+		::Action action_claw;
+		int level;
+		int exp;
+		int exp_level;
+		int talent_points;
 		virtual Void update( Float dt);
 
 		virtual Void init( );

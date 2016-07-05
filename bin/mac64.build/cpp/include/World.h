@@ -5,7 +5,9 @@
 #include <hxcpp.h>
 #endif
 
+HX_DECLARE_CLASS0(Creature)
 HX_DECLARE_CLASS0(World)
+HX_DECLARE_CLASS1(creatures,Player)
 HX_DECLARE_CLASS1(luxe,Emitter)
 HX_DECLARE_CLASS1(luxe,Entity)
 HX_DECLARE_CLASS1(luxe,Objects)
@@ -14,9 +16,6 @@ HX_DECLARE_CLASS1(luxe,Visual)
 HX_DECLARE_CLASS3(luxe,importers,tiled,TiledMap)
 HX_DECLARE_CLASS3(luxe,physics,nape,DebugDraw)
 HX_DECLARE_CLASS2(luxe,tilemaps,Tilemap)
-HX_DECLARE_CLASS2(nape,callbacks,CbType)
-HX_DECLARE_CLASS2(nape,callbacks,InteractionListener)
-HX_DECLARE_CLASS2(nape,callbacks,Listener)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 
@@ -47,15 +46,11 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("World","\x32","\x06","\x92","\x61"); }
 
-		static void __boot();
-		static ::nape::callbacks::CbType CBTYPE_TERRAIN;
-		static ::nape::callbacks::CbType CBTYPE_CREATURE;
-		static ::nape::callbacks::CbType CBTYPE_PROJECTILE;
-		static ::nape::callbacks::InteractionListener projectile_begin_interaction_listener;
 		static ::luxe::physics::nape::DebugDraw debugdraw;
 		::luxe::importers::tiled::TiledMap map;
 		::nape::phys::Body map_static;
-		::luxe::Sprite player;
+		::creatures::Player player;
+		Array< ::Dynamic > entities;
 		virtual Void generate_collision( );
 		Dynamic generate_collision_dyn();
 

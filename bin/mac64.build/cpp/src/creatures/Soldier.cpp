@@ -139,11 +139,17 @@ HX_STACK_ARG(_name,"_name")
 	int tmp12 = tmp11->set_filter_mag((int)9728);		HX_STACK_VAR(tmp12,"tmp12");
 	HX_STACK_LINE(17)
 	tmp10->set_filter_min(tmp12);
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(18)
+	int tmp13 = this->max_health = (int)2;		HX_STACK_VAR(tmp13,"tmp13");
+	HX_STACK_LINE(18)
+	this->health = tmp13;
+	HX_STACK_LINE(19)
+	this->exp_on_kill = (int)2;
+	HX_STACK_LINE(22)
 	{
 		struct _Function_2_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","creatures/Soldier.hx",20,0x1640b437)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","creatures/Soldier.hx",22,0x1640b437)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("name","\x4b","\x72","\xff","\x48") , HX_HCSTRING("animation","\x04","\xef","\x34","\x4b"),false);
@@ -152,84 +158,84 @@ HX_STACK_ARG(_name,"_name")
 				return null();
 			}
 		};
-		HX_STACK_LINE(20)
-		Dynamic tmp13 = _Function_2_1::Block();		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(20)
-		::luxe::components::sprite::SpriteAnimation tmp14 = ::luxe::components::sprite::SpriteAnimation_obj::__new(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(20)
-		::luxe::components::sprite::SpriteAnimation tmp15 = this->animation = tmp14;		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(20)
-		::luxe::components::sprite::SpriteAnimation _component = tmp15;		HX_STACK_VAR(_component,"_component");
-		HX_STACK_LINE(20)
+		HX_STACK_LINE(22)
+		Dynamic tmp14 = _Function_2_1::Block();		HX_STACK_VAR(tmp14,"tmp14");
+		HX_STACK_LINE(22)
+		::luxe::components::sprite::SpriteAnimation tmp15 = ::luxe::components::sprite::SpriteAnimation_obj::__new(tmp14);		HX_STACK_VAR(tmp15,"tmp15");
+		HX_STACK_LINE(22)
+		::luxe::components::sprite::SpriteAnimation tmp16 = this->animation = tmp15;		HX_STACK_VAR(tmp16,"tmp16");
+		HX_STACK_LINE(22)
+		::luxe::components::sprite::SpriteAnimation _component = tmp16;		HX_STACK_VAR(_component,"_component");
+		HX_STACK_LINE(22)
 		(this->component_count)++;
-		HX_STACK_LINE(20)
-		::luxe::components::Components tmp16 = this->_components;		HX_STACK_VAR(tmp16,"tmp16");
-		HX_STACK_LINE(20)
-		::luxe::components::sprite::SpriteAnimation tmp17 = _component;		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(20)
-		tmp16->add(tmp17);
+		HX_STACK_LINE(22)
+		::luxe::components::Components tmp17 = this->_components;		HX_STACK_VAR(tmp17,"tmp17");
+		HX_STACK_LINE(22)
+		::luxe::components::sprite::SpriteAnimation tmp18 = _component;		HX_STACK_VAR(tmp18,"tmp18");
+		HX_STACK_LINE(22)
+		tmp17->add(tmp18);
 	}
-	HX_STACK_LINE(21)
-	::luxe::components::sprite::SpriteAnimation tmp13 = this->animation;		HX_STACK_VAR(tmp13,"tmp13");
-	HX_STACK_LINE(21)
-	Dynamic tmp14 = anim_object;		HX_STACK_VAR(tmp14,"tmp14");
-	HX_STACK_LINE(21)
-	tmp13->add_from_json_object(tmp14);
-	HX_STACK_LINE(22)
-	::luxe::components::sprite::SpriteAnimation tmp15 = this->animation;		HX_STACK_VAR(tmp15,"tmp15");
-	HX_STACK_LINE(22)
-	tmp15->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
 	HX_STACK_LINE(23)
+	::luxe::components::sprite::SpriteAnimation tmp14 = this->animation;		HX_STACK_VAR(tmp14,"tmp14");
+	HX_STACK_LINE(23)
+	Dynamic tmp15 = anim_object;		HX_STACK_VAR(tmp15,"tmp15");
+	HX_STACK_LINE(23)
+	tmp14->add_from_json_object(tmp15);
+	HX_STACK_LINE(24)
 	::luxe::components::sprite::SpriteAnimation tmp16 = this->animation;		HX_STACK_VAR(tmp16,"tmp16");
-	HX_STACK_LINE(23)
-	tmp16->play();
-	HX_STACK_LINE(26)
+	HX_STACK_LINE(24)
+	tmp16->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
+	HX_STACK_LINE(25)
+	::luxe::components::sprite::SpriteAnimation tmp17 = this->animation;		HX_STACK_VAR(tmp17,"tmp17");
+	HX_STACK_LINE(25)
+	tmp17->play();
+	HX_STACK_LINE(28)
 	{
-		HX_STACK_LINE(26)
-		::controllers::SoldierController tmp17 = ::controllers::SoldierController_obj::__new();		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(26)
-		::Controller tmp18 = this->controller = tmp17;		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(26)
-		::Controller _component = tmp18;		HX_STACK_VAR(_component,"_component");
-		HX_STACK_LINE(26)
+		HX_STACK_LINE(28)
+		::controllers::SoldierController tmp18 = ::controllers::SoldierController_obj::__new();		HX_STACK_VAR(tmp18,"tmp18");
+		HX_STACK_LINE(28)
+		::Controller tmp19 = this->controller = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
+		HX_STACK_LINE(28)
+		::Controller _component = tmp19;		HX_STACK_VAR(_component,"_component");
+		HX_STACK_LINE(28)
 		(this->component_count)++;
-		HX_STACK_LINE(26)
-		::luxe::components::Components tmp19 = this->_components;		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(26)
-		::Controller tmp20 = _component;		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(26)
-		tmp19->add(tmp20);
+		HX_STACK_LINE(28)
+		::luxe::components::Components tmp20 = this->_components;		HX_STACK_VAR(tmp20,"tmp20");
+		HX_STACK_LINE(28)
+		::Controller tmp21 = _component;		HX_STACK_VAR(tmp21,"tmp21");
+		HX_STACK_LINE(28)
+		tmp20->add(tmp21);
 	}
-	HX_STACK_LINE(27)
-	::Controller tmp17 = this->controller;		HX_STACK_VAR(tmp17,"tmp17");
-	HX_STACK_LINE(27)
-	tmp17->acceleration = (int)2048;
-	HX_STACK_LINE(28)
+	HX_STACK_LINE(29)
 	::Controller tmp18 = this->controller;		HX_STACK_VAR(tmp18,"tmp18");
-	HX_STACK_LINE(28)
-	tmp18->max_speed = (int)128;
 	HX_STACK_LINE(29)
+	tmp18->acceleration = (int)2048;
+	HX_STACK_LINE(30)
 	::Controller tmp19 = this->controller;		HX_STACK_VAR(tmp19,"tmp19");
-	HX_STACK_LINE(29)
-	tmp19->jump_impulse = (int)256;
-	HX_STACK_LINE(32)
-	::luxe::Events tmp20 = this->events;		HX_STACK_VAR(tmp20,"tmp20");
+	HX_STACK_LINE(30)
+	tmp19->max_speed = (int)128;
+	HX_STACK_LINE(31)
+	::Controller tmp20 = this->controller;		HX_STACK_VAR(tmp20,"tmp20");
+	HX_STACK_LINE(31)
+	tmp20->jump_impulse = (int)256;
+	HX_STACK_LINE(34)
+	::luxe::Events tmp21 = this->events;		HX_STACK_VAR(tmp21,"tmp21");
 
 	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,::creatures::Soldier,_g)
 	int __ArgCount() const { return 1; }
 	Void run(Dynamic _){
-		HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","creatures/Soldier.hx",32,0x1640b437)
+		HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","creatures/Soldier.hx",34,0x1640b437)
 		HX_STACK_ARG(_,"_")
 		{
-			HX_STACK_LINE(32)
+			HX_STACK_LINE(34)
 			_g->set_animation(HX_HCSTRING("fire","\xb6","\xd3","\xbb","\x43"));
 		}
 		return null();
 	}
 	HX_END_LOCAL_FUNC1((void))
 
-	HX_STACK_LINE(32)
-	tmp20->listen(HX_HCSTRING("fire","\xb6","\xd3","\xbb","\x43"), Dynamic(new _Function_1_1(_g)));
+	HX_STACK_LINE(34)
+	tmp21->listen(HX_HCSTRING("fire","\xb6","\xd3","\xbb","\x43"), Dynamic(new _Function_1_1(_g)));
 }
 ;
 	return null();
@@ -250,338 +256,342 @@ Dynamic Soldier_obj::__Create(hx::DynamicArray inArgs)
 
 Void Soldier_obj::update( Float dt){
 {
-		HX_STACK_FRAME("creatures.Soldier","update",0x468b5eef,"creatures.Soldier.update","creatures/Soldier.hx",36,0x1640b437)
+		HX_STACK_FRAME("creatures.Soldier","update",0x468b5eef,"creatures.Soldier.update","creatures/Soldier.hx",38,0x1640b437)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(dt,"dt")
-		HX_STACK_LINE(38)
-		Float tmp;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(39)
+		Float tmp = dt;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(39)
+		this->super::update(tmp);
+		HX_STACK_LINE(42)
+		Float tmp1;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(42)
 		{
-			HX_STACK_LINE(38)
-			::nape::geom::Vec2 tmp1;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(38)
+			HX_STACK_LINE(42)
+			::nape::geom::Vec2 tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(42)
 			{
-				HX_STACK_LINE(38)
-				::Controller tmp2 = this->controller;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(38)
-				::nape::phys::Body tmp3 = tmp2->get_body();		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(38)
-				::nape::phys::Body _this = tmp3;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(38)
-				::nape::geom::Vec2 tmp4 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(38)
-				bool tmp5 = (tmp4 == null());		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(38)
-				if ((tmp5)){
-					HX_STACK_LINE(38)
+				HX_STACK_LINE(42)
+				::Controller tmp3 = this->controller;		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(42)
+				::nape::phys::Body tmp4 = tmp3->get_body();		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(42)
+				::nape::phys::Body _this = tmp4;		HX_STACK_VAR(_this,"_this");
+				HX_STACK_LINE(42)
+				::nape::geom::Vec2 tmp5 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp5,"tmp5");
+				HX_STACK_LINE(42)
+				bool tmp6 = (tmp5 == null());		HX_STACK_VAR(tmp6,"tmp6");
+				HX_STACK_LINE(42)
+				if ((tmp6)){
+					HX_STACK_LINE(42)
 					_this->zpp_inner->setupVelocity();
 				}
-				HX_STACK_LINE(38)
-				tmp1 = _this->zpp_inner->wrap_vel;
+				HX_STACK_LINE(42)
+				tmp2 = _this->zpp_inner->wrap_vel;
 			}
-			HX_STACK_LINE(38)
-			::nape::geom::Vec2 _this = tmp1;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(38)
+			HX_STACK_LINE(42)
+			::nape::geom::Vec2 _this = tmp2;		HX_STACK_VAR(_this,"_this");
+			HX_STACK_LINE(42)
 			{
-				HX_STACK_LINE(38)
-				bool tmp2 = (_this != null());		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(38)
-				bool tmp3;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(38)
-				if ((tmp2)){
-					HX_STACK_LINE(38)
-					tmp3 = _this->zpp_disp;
+				HX_STACK_LINE(42)
+				bool tmp3 = (_this != null());		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(42)
+				bool tmp4;		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(42)
+				if ((tmp3)){
+					HX_STACK_LINE(42)
+					tmp4 = _this->zpp_disp;
 				}
 				else{
-					HX_STACK_LINE(38)
-					tmp3 = false;
+					HX_STACK_LINE(42)
+					tmp4 = false;
 				}
-				HX_STACK_LINE(38)
-				if ((tmp3)){
-					HX_STACK_LINE(38)
-					::String tmp4 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(38)
-					::String tmp5 = (tmp4 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp5,"tmp5");
-					HX_STACK_LINE(38)
-					HX_STACK_DO_THROW(tmp5);
+				HX_STACK_LINE(42)
+				if ((tmp4)){
+					HX_STACK_LINE(42)
+					::String tmp5 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(42)
+					::String tmp6 = (tmp5 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp6,"tmp6");
+					HX_STACK_LINE(42)
+					HX_STACK_DO_THROW(tmp6);
 				}
 			}
-			HX_STACK_LINE(38)
+			HX_STACK_LINE(42)
 			{
-				HX_STACK_LINE(38)
+				HX_STACK_LINE(42)
 				::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-				HX_STACK_LINE(38)
-				bool tmp2 = (_this1->_validate != null());		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(38)
-				if ((tmp2)){
-					HX_STACK_LINE(38)
+				HX_STACK_LINE(42)
+				bool tmp3 = (_this1->_validate != null());		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(42)
+				if ((tmp3)){
+					HX_STACK_LINE(42)
 					_this1->_validate();
 				}
 			}
-			HX_STACK_LINE(38)
-			tmp = _this->zpp_inner->x;
+			HX_STACK_LINE(42)
+			tmp1 = _this->zpp_inner->x;
 		}
-		HX_STACK_LINE(38)
-		bool tmp1 = (tmp > (int)0);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(38)
-		if ((tmp1)){
-			HX_STACK_LINE(38)
+		HX_STACK_LINE(42)
+		bool tmp2 = (tmp1 > (int)0);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(42)
+		if ((tmp2)){
+			HX_STACK_LINE(42)
 			this->set_flipx(false);
 		}
 		else{
-			HX_STACK_LINE(39)
-			Float tmp2;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(39)
+			HX_STACK_LINE(43)
+			Float tmp3;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(43)
 			{
-				HX_STACK_LINE(39)
-				::nape::geom::Vec2 tmp3;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(39)
+				HX_STACK_LINE(43)
+				::nape::geom::Vec2 tmp4;		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(43)
 				{
-					HX_STACK_LINE(39)
-					::Controller tmp4 = this->controller;		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(39)
-					::nape::phys::Body tmp5 = tmp4->get_body();		HX_STACK_VAR(tmp5,"tmp5");
-					HX_STACK_LINE(39)
-					::nape::phys::Body _this = tmp5;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(39)
-					::nape::geom::Vec2 tmp6 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(39)
-					bool tmp7 = (tmp6 == null());		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(39)
-					if ((tmp7)){
-						HX_STACK_LINE(39)
+					HX_STACK_LINE(43)
+					::Controller tmp5 = this->controller;		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(43)
+					::nape::phys::Body tmp6 = tmp5->get_body();		HX_STACK_VAR(tmp6,"tmp6");
+					HX_STACK_LINE(43)
+					::nape::phys::Body _this = tmp6;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(43)
+					::nape::geom::Vec2 tmp7 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp7,"tmp7");
+					HX_STACK_LINE(43)
+					bool tmp8 = (tmp7 == null());		HX_STACK_VAR(tmp8,"tmp8");
+					HX_STACK_LINE(43)
+					if ((tmp8)){
+						HX_STACK_LINE(43)
 						_this->zpp_inner->setupVelocity();
 					}
-					HX_STACK_LINE(39)
-					tmp3 = _this->zpp_inner->wrap_vel;
+					HX_STACK_LINE(43)
+					tmp4 = _this->zpp_inner->wrap_vel;
 				}
-				HX_STACK_LINE(39)
-				::nape::geom::Vec2 _this = tmp3;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(39)
+				HX_STACK_LINE(43)
+				::nape::geom::Vec2 _this = tmp4;		HX_STACK_VAR(_this,"_this");
+				HX_STACK_LINE(43)
 				{
-					HX_STACK_LINE(39)
-					bool tmp4 = (_this != null());		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(39)
-					bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-					HX_STACK_LINE(39)
-					if ((tmp4)){
-						HX_STACK_LINE(39)
-						tmp5 = _this->zpp_disp;
+					HX_STACK_LINE(43)
+					bool tmp5 = (_this != null());		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(43)
+					bool tmp6;		HX_STACK_VAR(tmp6,"tmp6");
+					HX_STACK_LINE(43)
+					if ((tmp5)){
+						HX_STACK_LINE(43)
+						tmp6 = _this->zpp_disp;
 					}
 					else{
-						HX_STACK_LINE(39)
-						tmp5 = false;
+						HX_STACK_LINE(43)
+						tmp6 = false;
 					}
-					HX_STACK_LINE(39)
-					if ((tmp5)){
-						HX_STACK_LINE(39)
-						::String tmp6 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp6,"tmp6");
-						HX_STACK_LINE(39)
-						::String tmp7 = (tmp6 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp7,"tmp7");
-						HX_STACK_LINE(39)
-						HX_STACK_DO_THROW(tmp7);
+					HX_STACK_LINE(43)
+					if ((tmp6)){
+						HX_STACK_LINE(43)
+						::String tmp7 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp7,"tmp7");
+						HX_STACK_LINE(43)
+						::String tmp8 = (tmp7 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp8,"tmp8");
+						HX_STACK_LINE(43)
+						HX_STACK_DO_THROW(tmp8);
 					}
 				}
-				HX_STACK_LINE(39)
+				HX_STACK_LINE(43)
 				{
-					HX_STACK_LINE(39)
+					HX_STACK_LINE(43)
 					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-					HX_STACK_LINE(39)
-					bool tmp4 = (_this1->_validate != null());		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(39)
-					if ((tmp4)){
-						HX_STACK_LINE(39)
+					HX_STACK_LINE(43)
+					bool tmp5 = (_this1->_validate != null());		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(43)
+					if ((tmp5)){
+						HX_STACK_LINE(43)
 						_this1->_validate();
 					}
 				}
-				HX_STACK_LINE(39)
-				tmp2 = _this->zpp_inner->x;
+				HX_STACK_LINE(43)
+				tmp3 = _this->zpp_inner->x;
 			}
-			HX_STACK_LINE(39)
-			bool tmp3 = (tmp2 < (int)0);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(39)
-			if ((tmp3)){
-				HX_STACK_LINE(39)
+			HX_STACK_LINE(43)
+			bool tmp4 = (tmp3 < (int)0);		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(43)
+			if ((tmp4)){
+				HX_STACK_LINE(43)
 				this->set_flipx(true);
 			}
 		}
-		HX_STACK_LINE(42)
-		::luxe::components::sprite::SpriteAnimation tmp2 = this->animation;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(42)
-		bool tmp3 = tmp2->playing;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(42)
-		bool tmp4 = (tmp3 == false);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(42)
-		if ((tmp4)){
-			HX_STACK_LINE(44)
+		HX_STACK_LINE(46)
+		::luxe::components::sprite::SpriteAnimation tmp3 = this->animation;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(46)
+		bool tmp4 = tmp3->playing;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(46)
+		bool tmp5 = (tmp4 == false);		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(46)
+		if ((tmp5)){
+			HX_STACK_LINE(48)
 			this->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
 		}
 		else{
-			HX_STACK_LINE(46)
-			::Controller tmp5 = this->controller;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(46)
-			bool tmp6 = tmp5->grounded;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(46)
-			if ((tmp6)){
-				HX_STACK_LINE(48)
-				Float tmp7;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(48)
+			HX_STACK_LINE(50)
+			::Controller tmp6 = this->controller;		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(50)
+			bool tmp7 = tmp6->grounded;		HX_STACK_VAR(tmp7,"tmp7");
+			HX_STACK_LINE(50)
+			if ((tmp7)){
+				HX_STACK_LINE(52)
+				Float tmp8;		HX_STACK_VAR(tmp8,"tmp8");
+				HX_STACK_LINE(52)
 				{
-					HX_STACK_LINE(48)
-					::nape::geom::Vec2 tmp8;		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(48)
+					HX_STACK_LINE(52)
+					::nape::geom::Vec2 tmp9;		HX_STACK_VAR(tmp9,"tmp9");
+					HX_STACK_LINE(52)
 					{
-						HX_STACK_LINE(48)
-						::Controller tmp9 = this->controller;		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(48)
-						::nape::phys::Body tmp10 = tmp9->get_body();		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(48)
-						::nape::phys::Body _this = tmp10;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(48)
-						::nape::geom::Vec2 tmp11 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(48)
-						bool tmp12 = (tmp11 == null());		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(48)
-						if ((tmp12)){
-							HX_STACK_LINE(48)
+						HX_STACK_LINE(52)
+						::Controller tmp10 = this->controller;		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(52)
+						::nape::phys::Body tmp11 = tmp10->get_body();		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(52)
+						::nape::phys::Body _this = tmp11;		HX_STACK_VAR(_this,"_this");
+						HX_STACK_LINE(52)
+						::nape::geom::Vec2 tmp12 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp12,"tmp12");
+						HX_STACK_LINE(52)
+						bool tmp13 = (tmp12 == null());		HX_STACK_VAR(tmp13,"tmp13");
+						HX_STACK_LINE(52)
+						if ((tmp13)){
+							HX_STACK_LINE(52)
 							_this->zpp_inner->setupVelocity();
 						}
-						HX_STACK_LINE(48)
-						tmp8 = _this->zpp_inner->wrap_vel;
+						HX_STACK_LINE(52)
+						tmp9 = _this->zpp_inner->wrap_vel;
 					}
-					HX_STACK_LINE(48)
-					::nape::geom::Vec2 _this = tmp8;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(48)
+					HX_STACK_LINE(52)
+					::nape::geom::Vec2 _this = tmp9;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(52)
 					{
-						HX_STACK_LINE(48)
-						bool tmp9 = (_this != null());		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(48)
-						bool tmp10;		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(48)
-						if ((tmp9)){
-							HX_STACK_LINE(48)
-							tmp10 = _this->zpp_disp;
+						HX_STACK_LINE(52)
+						bool tmp10 = (_this != null());		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(52)
+						bool tmp11;		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(52)
+						if ((tmp10)){
+							HX_STACK_LINE(52)
+							tmp11 = _this->zpp_disp;
 						}
 						else{
-							HX_STACK_LINE(48)
-							tmp10 = false;
+							HX_STACK_LINE(52)
+							tmp11 = false;
 						}
-						HX_STACK_LINE(48)
-						if ((tmp10)){
-							HX_STACK_LINE(48)
-							::String tmp11 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp11,"tmp11");
-							HX_STACK_LINE(48)
-							::String tmp12 = (tmp11 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(48)
-							HX_STACK_DO_THROW(tmp12);
+						HX_STACK_LINE(52)
+						if ((tmp11)){
+							HX_STACK_LINE(52)
+							::String tmp12 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(52)
+							::String tmp13 = (tmp12 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(52)
+							HX_STACK_DO_THROW(tmp13);
 						}
 					}
-					HX_STACK_LINE(48)
+					HX_STACK_LINE(52)
 					{
-						HX_STACK_LINE(48)
+						HX_STACK_LINE(52)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(48)
-						bool tmp9 = (_this1->_validate != null());		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(48)
-						if ((tmp9)){
-							HX_STACK_LINE(48)
+						HX_STACK_LINE(52)
+						bool tmp10 = (_this1->_validate != null());		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(52)
+						if ((tmp10)){
+							HX_STACK_LINE(52)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(48)
-					tmp7 = _this->zpp_inner->x;
+					HX_STACK_LINE(52)
+					tmp8 = _this->zpp_inner->x;
 				}
-				HX_STACK_LINE(48)
-				Float tmp8 = ::Math_obj::abs(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(48)
-				bool tmp9 = (tmp8 > (int)16);		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(48)
-				if ((tmp9)){
-					HX_STACK_LINE(50)
+				HX_STACK_LINE(52)
+				Float tmp9 = ::Math_obj::abs(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+				HX_STACK_LINE(52)
+				bool tmp10 = (tmp9 > (int)16);		HX_STACK_VAR(tmp10,"tmp10");
+				HX_STACK_LINE(52)
+				if ((tmp10)){
+					HX_STACK_LINE(54)
 					this->set_animation(HX_HCSTRING("run","\x4b","\xe7","\x56","\x00"));
 				}
 				else{
-					HX_STACK_LINE(52)
-					Float tmp10;		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(52)
+					HX_STACK_LINE(56)
+					Float tmp11;		HX_STACK_VAR(tmp11,"tmp11");
+					HX_STACK_LINE(56)
 					{
-						HX_STACK_LINE(52)
-						::nape::geom::Vec2 tmp11;		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(52)
+						HX_STACK_LINE(56)
+						::nape::geom::Vec2 tmp12;		HX_STACK_VAR(tmp12,"tmp12");
+						HX_STACK_LINE(56)
 						{
-							HX_STACK_LINE(52)
-							::Controller tmp12 = this->controller;		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(52)
-							::nape::phys::Body tmp13 = tmp12->get_body();		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(52)
-							::nape::phys::Body _this = tmp13;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(52)
-							::nape::geom::Vec2 tmp14 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp14,"tmp14");
-							HX_STACK_LINE(52)
-							bool tmp15 = (tmp14 == null());		HX_STACK_VAR(tmp15,"tmp15");
-							HX_STACK_LINE(52)
-							if ((tmp15)){
-								HX_STACK_LINE(52)
+							HX_STACK_LINE(56)
+							::Controller tmp13 = this->controller;		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(56)
+							::nape::phys::Body tmp14 = tmp13->get_body();		HX_STACK_VAR(tmp14,"tmp14");
+							HX_STACK_LINE(56)
+							::nape::phys::Body _this = tmp14;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(56)
+							::nape::geom::Vec2 tmp15 = _this->zpp_inner->wrap_vel;		HX_STACK_VAR(tmp15,"tmp15");
+							HX_STACK_LINE(56)
+							bool tmp16 = (tmp15 == null());		HX_STACK_VAR(tmp16,"tmp16");
+							HX_STACK_LINE(56)
+							if ((tmp16)){
+								HX_STACK_LINE(56)
 								_this->zpp_inner->setupVelocity();
 							}
-							HX_STACK_LINE(52)
-							tmp11 = _this->zpp_inner->wrap_vel;
+							HX_STACK_LINE(56)
+							tmp12 = _this->zpp_inner->wrap_vel;
 						}
-						HX_STACK_LINE(52)
-						::nape::geom::Vec2 _this = tmp11;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(52)
+						HX_STACK_LINE(56)
+						::nape::geom::Vec2 _this = tmp12;		HX_STACK_VAR(_this,"_this");
+						HX_STACK_LINE(56)
 						{
-							HX_STACK_LINE(52)
-							bool tmp12 = (_this != null());		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(52)
-							bool tmp13;		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(52)
-							if ((tmp12)){
-								HX_STACK_LINE(52)
-								tmp13 = _this->zpp_disp;
+							HX_STACK_LINE(56)
+							bool tmp13 = (_this != null());		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(56)
+							bool tmp14;		HX_STACK_VAR(tmp14,"tmp14");
+							HX_STACK_LINE(56)
+							if ((tmp13)){
+								HX_STACK_LINE(56)
+								tmp14 = _this->zpp_disp;
 							}
 							else{
-								HX_STACK_LINE(52)
-								tmp13 = false;
+								HX_STACK_LINE(56)
+								tmp14 = false;
 							}
-							HX_STACK_LINE(52)
-							if ((tmp13)){
-								HX_STACK_LINE(52)
-								::String tmp14 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(52)
-								::String tmp15 = (tmp14 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp15,"tmp15");
-								HX_STACK_LINE(52)
-								HX_STACK_DO_THROW(tmp15);
+							HX_STACK_LINE(56)
+							if ((tmp14)){
+								HX_STACK_LINE(56)
+								::String tmp15 = HX_HCSTRING("Error: Vec2","\xcc","\x3a","\xb6","\x74");		HX_STACK_VAR(tmp15,"tmp15");
+								HX_STACK_LINE(56)
+								::String tmp16 = (tmp15 + HX_HCSTRING(" has been disposed and cannot be used!","\x2e","\x07","\xae","\x74"));		HX_STACK_VAR(tmp16,"tmp16");
+								HX_STACK_LINE(56)
+								HX_STACK_DO_THROW(tmp16);
 							}
 						}
-						HX_STACK_LINE(52)
+						HX_STACK_LINE(56)
 						{
-							HX_STACK_LINE(52)
+							HX_STACK_LINE(56)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-							HX_STACK_LINE(52)
-							bool tmp12 = (_this1->_validate != null());		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(52)
-							if ((tmp12)){
-								HX_STACK_LINE(52)
+							HX_STACK_LINE(56)
+							bool tmp13 = (_this1->_validate != null());		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(56)
+							if ((tmp13)){
+								HX_STACK_LINE(56)
 								_this1->_validate();
 							}
 						}
-						HX_STACK_LINE(52)
-						tmp10 = _this->zpp_inner->x;
+						HX_STACK_LINE(56)
+						tmp11 = _this->zpp_inner->x;
 					}
-					HX_STACK_LINE(52)
-					Float tmp11 = ::Math_obj::abs(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(52)
-					bool tmp12 = (tmp11 < (int)16);		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(52)
-					if ((tmp12)){
-						HX_STACK_LINE(54)
+					HX_STACK_LINE(56)
+					Float tmp12 = ::Math_obj::abs(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
+					HX_STACK_LINE(56)
+					bool tmp13 = (tmp12 < (int)16);		HX_STACK_VAR(tmp13,"tmp13");
+					HX_STACK_LINE(56)
+					if ((tmp13)){
+						HX_STACK_LINE(58)
 						this->set_animation(HX_HCSTRING("idle","\x14","\xa7","\xb3","\x45"));
 					}
 				}
 			}
 			else{
-				HX_STACK_LINE(59)
+				HX_STACK_LINE(63)
 				this->set_animation(HX_HCSTRING("fall","\x7b","\xbc","\xb5","\x43"));
 			}
 		}

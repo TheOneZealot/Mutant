@@ -11,6 +11,7 @@
 -D snow_native
 -D luxe
 -D nape
+-D mint
 -D hxcpp
 -D snow
 -D linc_openal
@@ -23,6 +24,7 @@
 -cp /usr/lib/haxelib/luxe/git/
 -cp src/
 -lib hxcpp
+-lib mint
 -lib nape
 -lib linc_opengl
 -lib linc_sdl

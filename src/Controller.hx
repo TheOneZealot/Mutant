@@ -25,6 +25,8 @@ class Controller extends luxe.Component
 	public var acceleration:Float;
 	public var max_speed:Float;
 	public var jump_impulse:Float;
+	public var friction_ground:Float;
+	public var friction_air:Float;
 	public var max_slope_angle:Float;
 	public var max_slope_y:Float;
 
@@ -34,6 +36,7 @@ class Controller extends luxe.Component
 
 	public var grounded:Bool = false;
 	public var slope:Bool = false;
+	var jumped_this_frame:Bool = false;
 
 	var space(get, null):Space;
 	var input_vector:Vec2 = new Vec2();
@@ -45,12 +48,14 @@ class Controller extends luxe.Component
 	{
 		super();
 
-		name = "controller";
+		name = 'controller';
 
 		gravity = 512;
 		acceleration = 1024;
 		max_speed = 128;
 		jump_impulse = 128;
+		friction_ground = 0.5;
+		friction_air = 0.9;
 		max_slope_angle = 70;
 		max_slope_y = -Math.cos(Maths.radians(max_slope_angle));
 	}
@@ -59,13 +64,17 @@ class Controller extends luxe.Component
 
 	override function update(dt:Float)
 	{
+		if (GameState.paused) return;
+
+		jumped_this_frame = false;
+
 		if (Math.abs(input_vector.x) > 0)
 		{
-			body.velocity.x += input_vector.x * acceleration * dt;
+			body.velocity.x += input_vector.x * acceleration * dt * (grounded ? 1 : 0.5);
 		}
 		else
 		{
-			body.velocity.x *= 0.5;
+			body.velocity.x *= grounded ? friction_ground : friction_air;
 		}
 		body.velocity.x = Maths.clamp(body.velocity.x, -max_speed, max_speed);
 		body.velocity.y += gravity * dt;
@@ -97,17 +106,17 @@ class Controller extends luxe.Component
 			// change ray origin depending on direction
 			if (movement_delta.x > 0)
 			{
-				ray_origin = new Vec2(skin_bounds.min.x, skin_bounds.max.y - (skin_bounds.height / (rays_vertical - 1)) * y);
+				ray_origin = new Vec2(skin_bounds.max.x, skin_bounds.max.y - (skin_bounds.height / (rays_vertical - 1)) * y);
 			}
 			else
 			{
-				ray_origin = new Vec2(skin_bounds.max.x, skin_bounds.max.y - (skin_bounds.height / (rays_vertical - 1)) * y);
+				ray_origin = new Vec2(skin_bounds.min.x, skin_bounds.max.y - (skin_bounds.height / (rays_vertical - 1)) * y);
 			}
 			// setup the ray to be cast
 			var ray:Ray = new Ray(ray_origin, new Vec2(ray_direction, 0));
-			ray.maxDistance = Math.abs(movement_delta.x) + skin_thickness + skin_bounds.width;
+			ray.maxDistance = Math.abs(movement_delta.x) + skin_thickness;
 			// the result of the raycast
-			var ray_result:RayResult = space.rayCast(ray);
+			var ray_result:RayResult = space.rayCast(ray, false, Physics.filters.creature);
 			// response to hit
 			if (ray_result != null)
 			{
@@ -155,7 +164,7 @@ class Controller extends luxe.Component
 			var ray:Ray = new Ray(ray_origin, new Vec2(0, ray_direction));
 			ray.maxDistance = Math.abs(movement_delta.y) + skin_thickness + skin_bounds.height;
 			// the result of the raycast
-			var ray_result:RayResult = space.rayCast(ray);
+			var ray_result:RayResult = space.rayCast(ray, false, Physics.filters.creature);
 			// response to hit
 			if (ray_result != null)
 			{
@@ -192,7 +201,7 @@ class Controller extends luxe.Component
 		var direction:Int = 1;
 		var ray:Ray = new Ray(body.position, new Vec2(0, direction));
 		ray.maxDistance = bounds.height / 2 + movement_delta.y + (grounded ? 12 : 0);
-		var result:RayResult = space.rayCast(ray);
+		var result:RayResult = space.rayCast(ray, false, Physics.filters.creature);
 		if (result != null)
 		{
 			if (result.normal.x != 0)
@@ -216,10 +225,19 @@ class Controller extends luxe.Component
 		var direction:Vector = new Vector(ray.direction.x, ray.direction.y).normalized;
 		if (result != null)
 		{
+			var hit_point:Vec2 = ray.at(result.distance);
 			Luxe.draw.line({
 				p0: new Vector(ray.origin.x, ray.origin.y),
-				p1: new Vector(ray.at(result.distance).x, ray.at(result.distance).y),
+				p1: new Vector(hit_point.x, hit_point.y),
+				color: new Color(1, 0, 0),
+				depth: 1000,
+				immediate: true
+			});
+			Luxe.draw.line({
+				p0: new Vector(hit_point.x, hit_point.y),
+				p1: new Vector(ray.origin.x, ray.origin.y).add(direction.multiplyScalar(ray.maxDistance)),
 				color: new Color(0, 1, 0),
+				depth: 1000,
 				immediate: true
 			});
 		}
@@ -229,6 +247,7 @@ class Controller extends luxe.Component
 				p0: new Vector(ray.origin.x, ray.origin.y),
 				p1: new Vector(ray.origin.x, ray.origin.y).add(direction.multiplyScalar(ray.maxDistance)),
 				color: new Color(1, 0, 0),
+				depth: 1000,
 				immediate: true
 			});
 		}
@@ -243,9 +262,11 @@ class Controller extends luxe.Component
 	{
 		if (!grounded) return;
 		grounded = false;
+		jumped_this_frame = true;
 		body.velocity.y = -jump_impulse;
 	}
 
+		/** getters and setters **/
 	public static function get_zero_friction():Material
 	{
 		return new Material(0, 0, 0);

@@ -15,6 +15,7 @@ linc_timestamp=0.0.0
 luxe=1.0.0-alpha
 luxe_native=1
 mac=1
+mint=1.0.0-alpha.2
 nape=2.0.20
 no-compilation=1
 no_compilation=1

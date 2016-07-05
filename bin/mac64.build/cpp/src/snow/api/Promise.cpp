@@ -730,6 +730,36 @@ HX_DEFINE_DYNAMIC_FUNC0(Promise_obj,state_string,return )
 ::snow::api::Promise Promise_obj::all( Array< ::Dynamic > list){
 	HX_STACK_FRAME("snow.api.Promise","all",0xe10102ef,"snow.api.Promise.all","snow/api/Promise.hx",136,0xcb181004)
 	HX_STACK_ARG(list,"list")
+	HX_STACK_LINE(139)
+	{
+		HX_STACK_LINE(139)
+		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
+		HX_STACK_LINE(139)
+		while((true)){
+			HX_STACK_LINE(139)
+			bool tmp = (_g < list->length);		HX_STACK_VAR(tmp,"tmp");
+			HX_STACK_LINE(139)
+			bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+			HX_STACK_LINE(139)
+			if ((tmp1)){
+				HX_STACK_LINE(139)
+				break;
+			}
+			HX_STACK_LINE(139)
+			::snow::api::Promise tmp2 = list->__get(_g).StaticCast< ::snow::api::Promise >();		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(139)
+			::snow::api::Promise item = tmp2;		HX_STACK_VAR(item,"item");
+			HX_STACK_LINE(139)
+			++(_g);
+			HX_STACK_LINE(140)
+			bool tmp3 = (item == null());		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(140)
+			if ((tmp3)){
+				HX_STACK_LINE(140)
+				HX_STACK_DO_THROW(HX_HCSTRING("Promise.all handed an array with null items within it","\x07","\x3d","\xbc","\x23"));
+			}
+		}
+	}
 
 	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,Array< ::Dynamic >,list)
 	int __ArgCount() const { return 2; }

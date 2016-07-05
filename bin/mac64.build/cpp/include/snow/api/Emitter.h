@@ -40,13 +40,13 @@ class HXCPP_CLASS_ATTRIBUTES  Emitter_obj : public hx::Object{
 		::haxe::ds::IntMap bindings;
 		::List connected;
 		::List _to_remove;
-		virtual Void emit( Dynamic event,Dynamic data);
+		virtual Void emit( Dynamic event,Dynamic data,Dynamic pos);
 		Dynamic emit_dyn();
 
-		virtual Void on( Dynamic event,Dynamic handler);
+		virtual Void on( Dynamic event,Dynamic handler,Dynamic pos);
 		Dynamic on_dyn();
 
-		virtual bool off( Dynamic event,Dynamic handler);
+		virtual bool off( Dynamic event,Dynamic handler,Dynamic pos);
 		Dynamic off_dyn();
 
 		bool _checking;

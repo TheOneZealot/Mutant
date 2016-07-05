@@ -8,6 +8,7 @@
 #ifndef INCLUDED_luxe_Sprite
 #include <luxe/Sprite.h>
 #endif
+HX_DECLARE_CLASS0(Action)
 HX_DECLARE_CLASS0(Controller)
 HX_DECLARE_CLASS0(Creature)
 HX_DECLARE_CLASS1(luxe,Component)
@@ -53,8 +54,32 @@ class HXCPP_CLASS_ATTRIBUTES  Creature_obj : public ::luxe::Sprite_obj{
 		::luxe::components::sprite::SpriteAnimation animation;
 		::luxe::components::physics::nape::BoxCollider collider;
 		::nape::phys::Body body;
+		int health;
+		int max_health;
+		int exp_on_kill;
+		Array< ::Dynamic > actions;
+		int facing;
+		Float speed_x;
+		Float default_anim_speed;
+		virtual Void update( Float dt);
+
 		virtual Void set_animation( ::String anim_name);
 		Dynamic set_animation_dyn();
+
+		virtual Void health_heal_any( Dynamic args);
+		Dynamic health_heal_any_dyn();
+
+		virtual Void health_damage_any( Dynamic args);
+		Dynamic health_damage_any_dyn();
+
+		virtual Void kill( Dynamic args);
+		Dynamic kill_dyn();
+
+		virtual int get_facing( );
+		Dynamic get_facing_dyn();
+
+		virtual Float get_speed_x( );
+		Dynamic get_speed_x_dyn();
 
 		virtual Void init( );
 

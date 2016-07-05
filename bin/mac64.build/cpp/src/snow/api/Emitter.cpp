@@ -55,12 +55,13 @@ Dynamic Emitter_obj::__Create(hx::DynamicArray inArgs)
 	_result_->__construct();
 	return _result_;}
 
-Void Emitter_obj::emit( Dynamic event,Dynamic data){
+Void Emitter_obj::emit( Dynamic event,Dynamic data,Dynamic pos){
 {
 		HX_STACK_FRAME("snow.api.Emitter","emit",0x4f728412,"snow.api.Emitter.emit","snow/api/Emitter.hx",35,0x93fe0e11)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(data,"data")
+		HX_STACK_ARG(pos,"pos")
 		HX_STACK_LINE(37)
 		this->_check();
 		HX_STACK_LINE(39)
@@ -116,14 +117,15 @@ return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC2(Emitter_obj,emit,(void))
+HX_DEFINE_DYNAMIC_FUNC3(Emitter_obj,emit,(void))
 
-Void Emitter_obj::on( Dynamic event,Dynamic handler){
+Void Emitter_obj::on( Dynamic event,Dynamic handler,Dynamic pos){
 {
 		HX_STACK_FRAME("snow.api.Emitter","on",0x7e24091e,"snow.api.Emitter.on","snow/api/Emitter.hx",54,0x93fe0e11)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(handler,"handler")
+		HX_STACK_ARG(pos,"pos")
 		HX_STACK_LINE(56)
 		this->_check();
 		HX_STACK_LINE(60)
@@ -145,19 +147,20 @@ Void Emitter_obj::on( Dynamic event,Dynamic handler){
 			HX_STACK_LINE(63)
 			::List tmp6 = this->connected;		HX_STACK_VAR(tmp6,"tmp6");
 			struct _Function_2_1{
-				inline static Dynamic Block( Dynamic &handler,Dynamic &event){
+				inline static Dynamic Block( Dynamic &pos,Dynamic &handler,Dynamic &event){
 					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","snow/api/Emitter.hx",63,0x93fe0e11)
 					{
 						hx::Anon __result = hx::Anon_obj::Create();
 						__result->Add(HX_HCSTRING("handler","\xca","\xaf","\xd5","\x45") , handler,false);
 						__result->Add(HX_HCSTRING("event","\x1a","\xc8","\xc4","\x75") , event,false);
+						__result->Add(HX_HCSTRING("pos","\x94","\x5d","\x55","\x00") , pos,false);
 						return __result;
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(63)
-			Dynamic tmp7 = _Function_2_1::Block(handler,event);		HX_STACK_VAR(tmp7,"tmp7");
+			Dynamic tmp7 = _Function_2_1::Block(pos,handler,event);		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(63)
 			tmp6->push(tmp7);
 		}
@@ -183,19 +186,20 @@ Void Emitter_obj::on( Dynamic event,Dynamic handler){
 				HX_STACK_LINE(69)
 				::List tmp10 = this->connected;		HX_STACK_VAR(tmp10,"tmp10");
 				struct _Function_3_1{
-					inline static Dynamic Block( Dynamic &handler,Dynamic &event){
+					inline static Dynamic Block( Dynamic &pos,Dynamic &handler,Dynamic &event){
 						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","snow/api/Emitter.hx",69,0x93fe0e11)
 						{
 							hx::Anon __result = hx::Anon_obj::Create();
 							__result->Add(HX_HCSTRING("handler","\xca","\xaf","\xd5","\x45") , handler,false);
 							__result->Add(HX_HCSTRING("event","\x1a","\xc8","\xc4","\x75") , event,false);
+							__result->Add(HX_HCSTRING("pos","\x94","\x5d","\x55","\x00") , pos,false);
 							return __result;
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(69)
-				Dynamic tmp11 = _Function_3_1::Block(handler,event);		HX_STACK_VAR(tmp11,"tmp11");
+				Dynamic tmp11 = _Function_3_1::Block(pos,handler,event);		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(69)
 				tmp10->push(tmp11);
 			}
@@ -205,13 +209,14 @@ return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC2(Emitter_obj,on,(void))
+HX_DEFINE_DYNAMIC_FUNC3(Emitter_obj,on,(void))
 
-bool Emitter_obj::off( Dynamic event,Dynamic handler){
+bool Emitter_obj::off( Dynamic event,Dynamic handler,Dynamic pos){
 	HX_STACK_FRAME("snow.api.Emitter","off",0xe163ea90,"snow.api.Emitter.off","snow/api/Emitter.hx",76,0x93fe0e11)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
 	HX_STACK_ARG(handler,"handler")
+	HX_STACK_ARG(pos,"pos")
 	HX_STACK_LINE(78)
 	this->_check();
 	HX_STACK_LINE(80)
@@ -312,7 +317,7 @@ bool Emitter_obj::off( Dynamic event,Dynamic handler){
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC2(Emitter_obj,off,return )
+HX_DEFINE_DYNAMIC_FUNC3(Emitter_obj,off,return )
 
 Void Emitter_obj::_check( ){
 {

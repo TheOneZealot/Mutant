@@ -88,9 +88,11 @@ bool Audio_obj::off_snow_systems_audio_AudioSource( int _event,Dynamic _handler)
 	HX_STACK_LINE(45)
 	Dynamic tmp2 = _handler;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(45)
-	bool tmp3 = tmp->off(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+	Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),45,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("off","\x6f","\x93","\x54","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(45)
-	return tmp3;
+	bool tmp4 = tmp->off(tmp1,tmp2,tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(45)
+	return tmp4;
 }
 
 
@@ -108,9 +110,11 @@ bool Audio_obj::off_Int( int _event,Dynamic _handler){
 	HX_STACK_LINE(45)
 	Dynamic tmp2 = _handler;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(45)
-	bool tmp3 = tmp->off(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+	Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),45,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("off","\x6f","\x93","\x54","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(45)
-	return tmp3;
+	bool tmp4 = tmp->off(tmp1,tmp2,tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(45)
+	return tmp4;
 }
 
 
@@ -129,7 +133,9 @@ Void Audio_obj::emit_snow_systems_audio_AudioSource( int _event,::snow::systems:
 		HX_STACK_LINE(52)
 		::snow::systems::audio::AudioSource tmp2 = _data;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(52)
-		tmp->emit(tmp1,tmp2);
+		Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),52,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("emit","\x53","\x9e","\x15","\x43"));		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(52)
+		tmp->emit(tmp1,tmp2,tmp3);
 	}
 return null();
 }
@@ -150,7 +156,9 @@ Void Audio_obj::emit_Int( int _event,Dynamic _data){
 		HX_STACK_LINE(52)
 		Dynamic tmp2 = _data;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(52)
-		tmp->emit(tmp1,tmp2);
+		Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),52,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("emit","\x53","\x9e","\x15","\x43"));		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(52)
+		tmp->emit(tmp1,tmp2,tmp3);
 	}
 return null();
 }
@@ -171,7 +179,9 @@ Void Audio_obj::on_snow_systems_audio_AudioSource( int _event,Dynamic _handler){
 		HX_STACK_LINE(38)
 		Dynamic tmp2 = _handler;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(38)
-		tmp->on(tmp1,tmp2);
+		Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),38,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("on","\x1f","\x61","\x00","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(38)
+		tmp->on(tmp1,tmp2,tmp3);
 	}
 return null();
 }
@@ -192,7 +202,9 @@ Void Audio_obj::on_Int( int _event,Dynamic _handler){
 		HX_STACK_LINE(38)
 		Dynamic tmp2 = _handler;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(38)
-		tmp->on(tmp1,tmp2);
+		Dynamic tmp3 = hx::SourceInfo(HX_HCSTRING("Audio.hx","\xc8","\x2f","\x63","\x41"),38,HX_HCSTRING("snow.systems.audio.Audio","\xe9","\x3c","\x7a","\x25"),HX_HCSTRING("on","\x1f","\x61","\x00","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(38)
+		tmp->on(tmp1,tmp2,tmp3);
 	}
 return null();
 }

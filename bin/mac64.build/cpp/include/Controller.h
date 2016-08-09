@@ -74,6 +74,8 @@ class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
 		::nape::geom::AABB bounds;
 		bool grounded;
 		bool slope;
+		::nape::phys::Body base;
+		::nape::geom::Vec2 base_relative_pos;
 		bool jumped_this_frame;
 		::nape::space::Space space;
 		::nape::geom::Vec2 input_vector;
@@ -92,6 +94,9 @@ class HXCPP_CLASS_ATTRIBUTES  Controller_obj : public ::luxe::Component_obj{
 
 		virtual Void slope_raycast( Float dt);
 		Dynamic slope_raycast_dyn();
+
+		virtual Void on_grounded( ::nape::geom::RayResult result);
+		Dynamic on_grounded_dyn();
 
 		virtual Void debug_ray( ::nape::geom::Ray ray,::nape::geom::RayResult result);
 		Dynamic debug_ray_dyn();

@@ -58273,17 +58273,17 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 		HX_STACK_LINE(348)
 		{
 			HX_STACK_LINE(348)
-			Float tmp12 = _qb->w;		HX_STACK_VAR(tmp12,"tmp12");
+			Float tmp12 = _qb->x;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(348)
 			Float tmp13 = -(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(348)
-			this->w = tmp13;
+			this->x = tmp13;
 			HX_STACK_LINE(348)
 			bool tmp14 = this->_construct;		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(348)
 			if ((tmp14)){
 				HX_STACK_LINE(348)
-				this->w;
+				this->x;
 			}
 			else{
 				HX_STACK_LINE(348)
@@ -59260,7 +59260,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 					}
 				}
 				HX_STACK_LINE(348)
-				Dynamic tmp15 = this->listen_w_dyn();		HX_STACK_VAR(tmp15,"tmp15");
+				Dynamic tmp15 = this->listen_x_dyn();		HX_STACK_VAR(tmp15,"tmp15");
 				HX_STACK_LINE(348)
 				bool tmp16 = (tmp15 != null());		HX_STACK_VAR(tmp16,"tmp16");
 				HX_STACK_LINE(348)
@@ -59283,28 +59283,28 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 				HX_STACK_LINE(348)
 				if ((tmp17)){
 					HX_STACK_LINE(348)
-					Float tmp18 = this->w;		HX_STACK_VAR(tmp18,"tmp18");
+					Float tmp18 = this->x;		HX_STACK_VAR(tmp18,"tmp18");
 					HX_STACK_LINE(348)
-					this->listen_w(tmp18);
+					this->listen_x(tmp18);
 				}
 				HX_STACK_LINE(348)
-				this->w;
+				this->x;
 			}
 		}
 		HX_STACK_LINE(349)
 		{
 			HX_STACK_LINE(349)
-			Float tmp12 = _qb->x;		HX_STACK_VAR(tmp12,"tmp12");
+			Float tmp12 = _qb->y;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(349)
 			Float tmp13 = -(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(349)
-			this->x = tmp13;
+			this->y = tmp13;
 			HX_STACK_LINE(349)
 			bool tmp14 = this->_construct;		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(349)
 			if ((tmp14)){
 				HX_STACK_LINE(349)
-				this->x;
+				this->y;
 			}
 			else{
 				HX_STACK_LINE(349)
@@ -60281,7 +60281,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 					}
 				}
 				HX_STACK_LINE(349)
-				Dynamic tmp15 = this->listen_x_dyn();		HX_STACK_VAR(tmp15,"tmp15");
+				Dynamic tmp15 = this->listen_y_dyn();		HX_STACK_VAR(tmp15,"tmp15");
 				HX_STACK_LINE(349)
 				bool tmp16 = (tmp15 != null());		HX_STACK_VAR(tmp16,"tmp16");
 				HX_STACK_LINE(349)
@@ -60304,28 +60304,28 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 				HX_STACK_LINE(349)
 				if ((tmp17)){
 					HX_STACK_LINE(349)
-					Float tmp18 = this->x;		HX_STACK_VAR(tmp18,"tmp18");
+					Float tmp18 = this->y;		HX_STACK_VAR(tmp18,"tmp18");
 					HX_STACK_LINE(349)
-					this->listen_x(tmp18);
+					this->listen_y(tmp18);
 				}
 				HX_STACK_LINE(349)
-				this->x;
+				this->y;
 			}
 		}
 		HX_STACK_LINE(350)
 		{
 			HX_STACK_LINE(350)
-			Float tmp12 = _qb->y;		HX_STACK_VAR(tmp12,"tmp12");
+			Float tmp12 = _qb->z;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(350)
 			Float tmp13 = -(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(350)
-			this->y = tmp13;
+			this->z = tmp13;
 			HX_STACK_LINE(350)
 			bool tmp14 = this->_construct;		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(350)
 			if ((tmp14)){
 				HX_STACK_LINE(350)
-				this->y;
+				this->z;
 			}
 			else{
 				HX_STACK_LINE(350)
@@ -61302,7 +61302,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 					}
 				}
 				HX_STACK_LINE(350)
-				Dynamic tmp15 = this->listen_y_dyn();		HX_STACK_VAR(tmp15,"tmp15");
+				Dynamic tmp15 = this->listen_z_dyn();		HX_STACK_VAR(tmp15,"tmp15");
 				HX_STACK_LINE(350)
 				bool tmp16 = (tmp15 != null());		HX_STACK_VAR(tmp16,"tmp16");
 				HX_STACK_LINE(350)
@@ -61325,28 +61325,28 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 				HX_STACK_LINE(350)
 				if ((tmp17)){
 					HX_STACK_LINE(350)
-					Float tmp18 = this->y;		HX_STACK_VAR(tmp18,"tmp18");
+					Float tmp18 = this->z;		HX_STACK_VAR(tmp18,"tmp18");
 					HX_STACK_LINE(350)
-					this->listen_y(tmp18);
+					this->listen_z(tmp18);
 				}
 				HX_STACK_LINE(350)
-				this->y;
+				this->z;
 			}
 		}
 		HX_STACK_LINE(351)
 		{
 			HX_STACK_LINE(351)
-			Float tmp12 = _qb->z;		HX_STACK_VAR(tmp12,"tmp12");
+			Float tmp12 = _qb->w;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(351)
 			Float tmp13 = -(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(351)
-			this->z = tmp13;
+			this->w = tmp13;
 			HX_STACK_LINE(351)
 			bool tmp14 = this->_construct;		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(351)
 			if ((tmp14)){
 				HX_STACK_LINE(351)
-				this->z;
+				this->w;
 			}
 			else{
 				HX_STACK_LINE(351)
@@ -62323,7 +62323,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 					}
 				}
 				HX_STACK_LINE(351)
-				Dynamic tmp15 = this->listen_z_dyn();		HX_STACK_VAR(tmp15,"tmp15");
+				Dynamic tmp15 = this->listen_w_dyn();		HX_STACK_VAR(tmp15,"tmp15");
 				HX_STACK_LINE(351)
 				bool tmp16 = (tmp15 != null());		HX_STACK_VAR(tmp16,"tmp16");
 				HX_STACK_LINE(351)
@@ -62346,12 +62346,12 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 				HX_STACK_LINE(351)
 				if ((tmp17)){
 					HX_STACK_LINE(351)
-					Float tmp18 = this->z;		HX_STACK_VAR(tmp18,"tmp18");
+					Float tmp18 = this->w;		HX_STACK_VAR(tmp18,"tmp18");
 					HX_STACK_LINE(351)
-					this->listen_z(tmp18);
+					this->listen_w(tmp18);
 				}
 				HX_STACK_LINE(351)
-				this->z;
+				this->w;
 			}
 		}
 		HX_STACK_LINE(353)
@@ -67563,9 +67563,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 			HX_STACK_LINE(374)
 			{
 				HX_STACK_LINE(374)
-				Float tmp21 = _w;		HX_STACK_VAR(tmp21,"tmp21");
+				Float tmp21 = _x;		HX_STACK_VAR(tmp21,"tmp21");
 				HX_STACK_LINE(374)
-				Float tmp22 = this->w;		HX_STACK_VAR(tmp22,"tmp22");
+				Float tmp22 = this->x;		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(374)
 				Float tmp23 = (tmp21 + tmp22);		HX_STACK_VAR(tmp23,"tmp23");
 				HX_STACK_LINE(374)
@@ -68588,9 +68588,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 			HX_STACK_LINE(374)
 			{
 				HX_STACK_LINE(375)
-				Float tmp21 = _x;		HX_STACK_VAR(tmp21,"tmp21");
+				Float tmp21 = _y;		HX_STACK_VAR(tmp21,"tmp21");
 				HX_STACK_LINE(375)
-				Float tmp22 = this->x;		HX_STACK_VAR(tmp22,"tmp22");
+				Float tmp22 = this->y;		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(375)
 				Float tmp23 = (tmp21 + tmp22);		HX_STACK_VAR(tmp23,"tmp23");
 				HX_STACK_LINE(375)
@@ -69613,9 +69613,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 			HX_STACK_LINE(374)
 			{
 				HX_STACK_LINE(376)
-				Float tmp21 = _y;		HX_STACK_VAR(tmp21,"tmp21");
+				Float tmp21 = _z;		HX_STACK_VAR(tmp21,"tmp21");
 				HX_STACK_LINE(376)
-				Float tmp22 = this->y;		HX_STACK_VAR(tmp22,"tmp22");
+				Float tmp22 = this->z;		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(376)
 				Float tmp23 = (tmp21 + tmp22);		HX_STACK_VAR(tmp23,"tmp23");
 				HX_STACK_LINE(376)
@@ -70638,9 +70638,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 			HX_STACK_LINE(374)
 			{
 				HX_STACK_LINE(377)
-				Float tmp21 = _z;		HX_STACK_VAR(tmp21,"tmp21");
+				Float tmp21 = _w;		HX_STACK_VAR(tmp21,"tmp21");
 				HX_STACK_LINE(377)
-				Float tmp22 = this->z;		HX_STACK_VAR(tmp22,"tmp22");
+				Float tmp22 = this->w;		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(377)
 				Float tmp23 = (tmp21 + tmp22);		HX_STACK_VAR(tmp23,"tmp23");
 				HX_STACK_LINE(377)
@@ -72782,9 +72782,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 		HX_STACK_LINE(386)
 		{
 			HX_STACK_LINE(386)
-			Float tmp31 = (_w * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
+			Float tmp31 = (_x * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
 			HX_STACK_LINE(386)
-			Float tmp32 = this->w;		HX_STACK_VAR(tmp32,"tmp32");
+			Float tmp32 = this->x;		HX_STACK_VAR(tmp32,"tmp32");
 			HX_STACK_LINE(386)
 			Float tmp33 = ratioB;		HX_STACK_VAR(tmp33,"tmp33");
 			HX_STACK_LINE(386)
@@ -73809,9 +73809,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 		HX_STACK_LINE(386)
 		{
 			HX_STACK_LINE(387)
-			Float tmp31 = (_x * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
+			Float tmp31 = (_y * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
 			HX_STACK_LINE(387)
-			Float tmp32 = this->x;		HX_STACK_VAR(tmp32,"tmp32");
+			Float tmp32 = this->y;		HX_STACK_VAR(tmp32,"tmp32");
 			HX_STACK_LINE(387)
 			Float tmp33 = ratioB;		HX_STACK_VAR(tmp33,"tmp33");
 			HX_STACK_LINE(387)
@@ -74836,9 +74836,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 		HX_STACK_LINE(386)
 		{
 			HX_STACK_LINE(388)
-			Float tmp31 = (_y * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
+			Float tmp31 = (_z * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
 			HX_STACK_LINE(388)
-			Float tmp32 = this->y;		HX_STACK_VAR(tmp32,"tmp32");
+			Float tmp32 = this->z;		HX_STACK_VAR(tmp32,"tmp32");
 			HX_STACK_LINE(388)
 			Float tmp33 = ratioB;		HX_STACK_VAR(tmp33,"tmp33");
 			HX_STACK_LINE(388)
@@ -75863,9 +75863,9 @@ HX_DEFINE_DYNAMIC_FUNC2(Quaternion_obj,multiplyQuaternions,return )
 		HX_STACK_LINE(386)
 		{
 			HX_STACK_LINE(389)
-			Float tmp31 = (_z * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
+			Float tmp31 = (_w * ratioA);		HX_STACK_VAR(tmp31,"tmp31");
 			HX_STACK_LINE(389)
-			Float tmp32 = this->z;		HX_STACK_VAR(tmp32,"tmp32");
+			Float tmp32 = this->w;		HX_STACK_VAR(tmp32,"tmp32");
 			HX_STACK_LINE(389)
 			Float tmp33 = ratioB;		HX_STACK_VAR(tmp33,"tmp33");
 			HX_STACK_LINE(389)

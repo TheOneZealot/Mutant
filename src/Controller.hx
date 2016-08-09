@@ -16,6 +16,8 @@ import luxe.utils.Maths;
 import luxe.components.sprite.SpriteAnimation;
 import luxe.components.physics.nape.BoxCollider;
 
+// TODO: Add standing base support i.e moving platforms
+
 class Controller extends luxe.Component
 {
 	public static var zero_friction(get, null):Material;
@@ -36,6 +38,8 @@ class Controller extends luxe.Component
 
 	public var grounded:Bool = false;
 	public var slope:Bool = false;
+	public var base:Body = null;
+	var base_relative_pos:Vec2 = new Vec2();
 	var jumped_this_frame:Bool = false;
 
 	var space(get, null):Space;
@@ -67,6 +71,11 @@ class Controller extends luxe.Component
 		if (GameState.paused) return;
 
 		jumped_this_frame = false;
+
+		if (base != null && grounded == true)
+		{
+			body.velocity.x += base.velocity.x;
+		}
 
 		if (Math.abs(input_vector.x) > 0)
 		{
@@ -174,7 +183,7 @@ class Controller extends luxe.Component
 				{
 					body.velocity.y = 0;
 					body.position.y = ray.at(ray_result.distance).y - (bounds.height / 2) * ray_direction;
-					if (ray_direction > 0) grounded = true;
+					if (ray_direction > 0) on_grounded(ray_result);
 					break;
 				}
 				else
@@ -213,10 +222,20 @@ class Controller extends luxe.Component
 			{
 				body.velocity.y = 0;
 				body.position.y = ray.at(result.distance).y - (bounds.height / 2) * direction;
-				if (direction > 0) grounded = true;
+				if (direction > 0) on_grounded(result);
 			}
 		}
 		debug_ray(ray, result);
+	}
+
+	function on_grounded(result:RayResult)
+	{
+		grounded = true;
+		base = result.shape.body;
+		if (base != null)
+		{
+			base_relative_pos = body.position.copy().sub(base.position);
+		}
 	}
 
 	function debug_ray(ray:Ray, result:RayResult)

@@ -449,6 +449,10 @@ Void Main_obj::onassetsloaded( ::luxe::Parcel _){
 		tmp20->listen(HX_HCSTRING("health.damage.*","\x7d","\xb4","\x33","\xb6"), Dynamic(new _Function_1_1()));
 		HX_STACK_LINE(91)
 		this->loaded = true;
+		HX_STACK_LINE(93)
+		::GameState tmp21 = ::Main_obj::gamestate;		HX_STACK_VAR(tmp21,"tmp21");
+		HX_STACK_LINE(93)
+		tmp21->set(HX_HCSTRING("playing","\x6e","\x0f","\x18","\x8a"),null(),null());
 	}
 return null();
 }
@@ -458,40 +462,40 @@ HX_DEFINE_DYNAMIC_FUNC1(Main_obj,onassetsloaded,(void))
 
 Void Main_obj::onkeyup( ::luxe::KeyEvent e){
 {
-		HX_STACK_FRAME("Main","onkeyup",0x46406b26,"Main.onkeyup","Main.hx",95,0x087e5c05)
+		HX_STACK_FRAME("Main","onkeyup",0x46406b26,"Main.onkeyup","Main.hx",97,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(e,"e")
-		HX_STACK_LINE(96)
+		HX_STACK_LINE(98)
 		bool tmp = (e->keycode == (int)27);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(96)
+		HX_STACK_LINE(98)
 		if ((tmp)){
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(100)
 			::GameState tmp1 = ::Main_obj::gamestate;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(100)
 			::String tmp2 = tmp1->current_state->name;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(100)
 			bool tmp3 = (tmp2 == HX_HCSTRING("paused","\xae","\x40","\x84","\xef"));		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(100)
 			if ((tmp3)){
-				HX_STACK_LINE(100)
+				HX_STACK_LINE(102)
 				::GameState tmp4 = ::Main_obj::gamestate;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(100)
+				HX_STACK_LINE(102)
 				tmp4->set(HX_HCSTRING("playing","\x6e","\x0f","\x18","\x8a"),null(),null());
 			}
 			else{
-				HX_STACK_LINE(104)
+				HX_STACK_LINE(106)
 				::GameState tmp4 = ::Main_obj::gamestate;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(104)
+				HX_STACK_LINE(106)
 				tmp4->set(HX_HCSTRING("paused","\xae","\x40","\x84","\xef"),null(),null());
 			}
 		}
-		HX_STACK_LINE(107)
+		HX_STACK_LINE(109)
 		bool tmp1 = (e->keycode == (int)114);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(107)
+		HX_STACK_LINE(109)
 		if ((tmp1)){
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			::luxe::Events tmp2 = ::Luxe_obj::events;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			tmp2->fire(HX_HCSTRING("reset","\xcf","\x49","\xc8","\xe6"),null(),null());
 		}
 	}
@@ -501,176 +505,66 @@ return null();
 
 Void Main_obj::update( Float dt){
 {
-		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",114,0x087e5c05)
+		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",116,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(dt,"dt")
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp = this->loaded;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp1 = tmp;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp2 = !(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp3 = !(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		if ((tmp4)){
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			::World tmp6 = ::Main_obj::world;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			::World tmp7 = tmp6;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			::World tmp8 = tmp7;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			::creatures::Player tmp9 = tmp8->player;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			tmp5 = (tmp9 == null());
 		}
 		else{
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			tmp5 = true;
 		}
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp6 = !(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		bool tmp7;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		if ((tmp6)){
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			tmp7 = ::GameState_obj::paused;
 		}
 		else{
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			tmp7 = true;
 		}
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		if ((tmp7)){
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			return null();
 		}
-		HX_STACK_LINE(117)
+		HX_STACK_LINE(119)
 		bool tmp8 = ::Main_obj::shaking;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(117)
+		HX_STACK_LINE(119)
 		if ((tmp8)){
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			::luxe::utils::Utils tmp9 = ::Luxe_obj::utils;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			::phoenix::Vector tmp10 = tmp9->geometry->random_point_in_unit_circle();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			::Main_obj::shake_vector = tmp10;
-			HX_STACK_LINE(123)
-			{
-				HX_STACK_LINE(123)
-				::phoenix::Vector tmp11 = ::Main_obj::shake_vector;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(123)
-				::phoenix::Vector _g = tmp11;		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(123)
-				{
-					HX_STACK_LINE(123)
-					Float tmp12 = _g->x;		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(123)
-					Float tmp13 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(123)
-					Float tmp14 = (tmp12 * tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(123)
-					Float _x = tmp14;		HX_STACK_VAR(_x,"_x");
-					HX_STACK_LINE(123)
-					_g->x = _x;
-					HX_STACK_LINE(123)
-					bool tmp15 = _g->_construct;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(123)
-					if ((tmp15)){
-						HX_STACK_LINE(123)
-						_g->x;
-					}
-					else{
-						HX_STACK_LINE(123)
-						bool tmp16 = (_g->listen_x != null());		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(123)
-						bool tmp17;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(123)
-						if ((tmp16)){
-							HX_STACK_LINE(123)
-							bool tmp18 = _g->ignore_listeners;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(123)
-							bool tmp19 = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(123)
-							tmp17 = !(tmp19);
-						}
-						else{
-							HX_STACK_LINE(123)
-							tmp17 = false;
-						}
-						HX_STACK_LINE(123)
-						if ((tmp17)){
-							HX_STACK_LINE(123)
-							Float tmp18 = _x;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(123)
-							_g->listen_x(tmp18);
-						}
-						HX_STACK_LINE(123)
-						_g->x;
-					}
-				}
-			}
-			HX_STACK_LINE(124)
-			{
-				HX_STACK_LINE(124)
-				::phoenix::Vector tmp11 = ::Main_obj::shake_vector;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(124)
-				::phoenix::Vector _g = tmp11;		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(124)
-				{
-					HX_STACK_LINE(124)
-					Float tmp12 = _g->y;		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(124)
-					Float tmp13 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(124)
-					Float tmp14 = (tmp12 * tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(124)
-					Float _y = tmp14;		HX_STACK_VAR(_y,"_y");
-					HX_STACK_LINE(124)
-					_g->y = _y;
-					HX_STACK_LINE(124)
-					bool tmp15 = _g->_construct;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(124)
-					if ((tmp15)){
-						HX_STACK_LINE(124)
-						_g->y;
-					}
-					else{
-						HX_STACK_LINE(124)
-						bool tmp16 = (_g->listen_y != null());		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(124)
-						bool tmp17;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(124)
-						if ((tmp16)){
-							HX_STACK_LINE(124)
-							bool tmp18 = _g->ignore_listeners;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(124)
-							bool tmp19 = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(124)
-							tmp17 = !(tmp19);
-						}
-						else{
-							HX_STACK_LINE(124)
-							tmp17 = false;
-						}
-						HX_STACK_LINE(124)
-						if ((tmp17)){
-							HX_STACK_LINE(124)
-							Float tmp18 = _y;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(124)
-							_g->listen_y(tmp18);
-						}
-						HX_STACK_LINE(124)
-						_g->y;
-					}
-				}
-			}
 			HX_STACK_LINE(125)
 			{
 				HX_STACK_LINE(125)
@@ -680,25 +574,25 @@ Void Main_obj::update( Float dt){
 				HX_STACK_LINE(125)
 				{
 					HX_STACK_LINE(125)
-					Float tmp12 = _g->z;		HX_STACK_VAR(tmp12,"tmp12");
+					Float tmp12 = _g->x;		HX_STACK_VAR(tmp12,"tmp12");
 					HX_STACK_LINE(125)
 					Float tmp13 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp13,"tmp13");
 					HX_STACK_LINE(125)
 					Float tmp14 = (tmp12 * tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 					HX_STACK_LINE(125)
-					Float _z = tmp14;		HX_STACK_VAR(_z,"_z");
+					Float _x = tmp14;		HX_STACK_VAR(_x,"_x");
 					HX_STACK_LINE(125)
-					_g->z = _z;
+					_g->x = _x;
 					HX_STACK_LINE(125)
 					bool tmp15 = _g->_construct;		HX_STACK_VAR(tmp15,"tmp15");
 					HX_STACK_LINE(125)
 					if ((tmp15)){
 						HX_STACK_LINE(125)
-						_g->z;
+						_g->x;
 					}
 					else{
 						HX_STACK_LINE(125)
-						bool tmp16 = (_g->listen_z != null());		HX_STACK_VAR(tmp16,"tmp16");
+						bool tmp16 = (_g->listen_x != null());		HX_STACK_VAR(tmp16,"tmp16");
 						HX_STACK_LINE(125)
 						bool tmp17;		HX_STACK_VAR(tmp17,"tmp17");
 						HX_STACK_LINE(125)
@@ -717,61 +611,171 @@ Void Main_obj::update( Float dt){
 						HX_STACK_LINE(125)
 						if ((tmp17)){
 							HX_STACK_LINE(125)
-							Float tmp18 = _z;		HX_STACK_VAR(tmp18,"tmp18");
+							Float tmp18 = _x;		HX_STACK_VAR(tmp18,"tmp18");
 							HX_STACK_LINE(125)
-							_g->listen_z(tmp18);
+							_g->listen_x(tmp18);
 						}
 						HX_STACK_LINE(125)
+						_g->x;
+					}
+				}
+			}
+			HX_STACK_LINE(126)
+			{
+				HX_STACK_LINE(126)
+				::phoenix::Vector tmp11 = ::Main_obj::shake_vector;		HX_STACK_VAR(tmp11,"tmp11");
+				HX_STACK_LINE(126)
+				::phoenix::Vector _g = tmp11;		HX_STACK_VAR(_g,"_g");
+				HX_STACK_LINE(126)
+				{
+					HX_STACK_LINE(126)
+					Float tmp12 = _g->y;		HX_STACK_VAR(tmp12,"tmp12");
+					HX_STACK_LINE(126)
+					Float tmp13 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp13,"tmp13");
+					HX_STACK_LINE(126)
+					Float tmp14 = (tmp12 * tmp13);		HX_STACK_VAR(tmp14,"tmp14");
+					HX_STACK_LINE(126)
+					Float _y = tmp14;		HX_STACK_VAR(_y,"_y");
+					HX_STACK_LINE(126)
+					_g->y = _y;
+					HX_STACK_LINE(126)
+					bool tmp15 = _g->_construct;		HX_STACK_VAR(tmp15,"tmp15");
+					HX_STACK_LINE(126)
+					if ((tmp15)){
+						HX_STACK_LINE(126)
+						_g->y;
+					}
+					else{
+						HX_STACK_LINE(126)
+						bool tmp16 = (_g->listen_y != null());		HX_STACK_VAR(tmp16,"tmp16");
+						HX_STACK_LINE(126)
+						bool tmp17;		HX_STACK_VAR(tmp17,"tmp17");
+						HX_STACK_LINE(126)
+						if ((tmp16)){
+							HX_STACK_LINE(126)
+							bool tmp18 = _g->ignore_listeners;		HX_STACK_VAR(tmp18,"tmp18");
+							HX_STACK_LINE(126)
+							bool tmp19 = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
+							HX_STACK_LINE(126)
+							tmp17 = !(tmp19);
+						}
+						else{
+							HX_STACK_LINE(126)
+							tmp17 = false;
+						}
+						HX_STACK_LINE(126)
+						if ((tmp17)){
+							HX_STACK_LINE(126)
+							Float tmp18 = _y;		HX_STACK_VAR(tmp18,"tmp18");
+							HX_STACK_LINE(126)
+							_g->listen_y(tmp18);
+						}
+						HX_STACK_LINE(126)
+						_g->y;
+					}
+				}
+			}
+			HX_STACK_LINE(127)
+			{
+				HX_STACK_LINE(127)
+				::phoenix::Vector tmp11 = ::Main_obj::shake_vector;		HX_STACK_VAR(tmp11,"tmp11");
+				HX_STACK_LINE(127)
+				::phoenix::Vector _g = tmp11;		HX_STACK_VAR(_g,"_g");
+				HX_STACK_LINE(127)
+				{
+					HX_STACK_LINE(127)
+					Float tmp12 = _g->z;		HX_STACK_VAR(tmp12,"tmp12");
+					HX_STACK_LINE(127)
+					Float tmp13 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp13,"tmp13");
+					HX_STACK_LINE(127)
+					Float tmp14 = (tmp12 * tmp13);		HX_STACK_VAR(tmp14,"tmp14");
+					HX_STACK_LINE(127)
+					Float _z = tmp14;		HX_STACK_VAR(_z,"_z");
+					HX_STACK_LINE(127)
+					_g->z = _z;
+					HX_STACK_LINE(127)
+					bool tmp15 = _g->_construct;		HX_STACK_VAR(tmp15,"tmp15");
+					HX_STACK_LINE(127)
+					if ((tmp15)){
+						HX_STACK_LINE(127)
+						_g->z;
+					}
+					else{
+						HX_STACK_LINE(127)
+						bool tmp16 = (_g->listen_z != null());		HX_STACK_VAR(tmp16,"tmp16");
+						HX_STACK_LINE(127)
+						bool tmp17;		HX_STACK_VAR(tmp17,"tmp17");
+						HX_STACK_LINE(127)
+						if ((tmp16)){
+							HX_STACK_LINE(127)
+							bool tmp18 = _g->ignore_listeners;		HX_STACK_VAR(tmp18,"tmp18");
+							HX_STACK_LINE(127)
+							bool tmp19 = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
+							HX_STACK_LINE(127)
+							tmp17 = !(tmp19);
+						}
+						else{
+							HX_STACK_LINE(127)
+							tmp17 = false;
+						}
+						HX_STACK_LINE(127)
+						if ((tmp17)){
+							HX_STACK_LINE(127)
+							Float tmp18 = _z;		HX_STACK_VAR(tmp18,"tmp18");
+							HX_STACK_LINE(127)
+							_g->listen_z(tmp18);
+						}
+						HX_STACK_LINE(127)
 						_g->z;
 					}
 				}
 			}
-			HX_STACK_LINE(128)
+			HX_STACK_LINE(130)
 			hx::MultEq(::Main_obj::shake_amount,((Float)0.9));
-			HX_STACK_LINE(131)
+			HX_STACK_LINE(133)
 			Float tmp11 = ::Main_obj::shake_amount;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(131)
+			HX_STACK_LINE(133)
 			Float tmp12 = ::Main_obj::min_shake;		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(131)
+			HX_STACK_LINE(133)
 			bool tmp13 = (tmp11 <= tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(131)
+			HX_STACK_LINE(133)
 			if ((tmp13)){
-				HX_STACK_LINE(133)
-				::phoenix::Vector tmp14 = ::phoenix::Vector_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(133)
-				::Main_obj::shake_vector = tmp14;
-				HX_STACK_LINE(134)
-				::Main_obj::shake_amount = (int)0;
 				HX_STACK_LINE(135)
+				::phoenix::Vector tmp14 = ::phoenix::Vector_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(135)
+				::Main_obj::shake_vector = tmp14;
+				HX_STACK_LINE(136)
+				::Main_obj::shake_amount = (int)0;
+				HX_STACK_LINE(137)
 				::Main_obj::shaking = false;
 			}
 		}
-		HX_STACK_LINE(139)
+		HX_STACK_LINE(141)
 		::luxe::Camera tmp9 = ::Luxe_obj::camera;		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(139)
+		HX_STACK_LINE(141)
 		::phoenix::Vector tmp10;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(139)
+		HX_STACK_LINE(141)
 		{
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			::World tmp11 = ::Main_obj::world;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			::phoenix::Vector tmp12 = tmp11->player->get_pos();		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			::phoenix::Vector a = tmp12;		HX_STACK_VAR(a,"a");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			::phoenix::Vector tmp13 = ::Main_obj::shake_vector;		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			::phoenix::Vector b = tmp13;		HX_STACK_VAR(b,"b");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			Float tmp14 = (a->x + b->x);		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			Float tmp15 = (a->y + b->y);		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			Float tmp16 = (a->z + b->z);		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(139)
+			HX_STACK_LINE(141)
 			tmp10 = ::phoenix::Vector_obj::__new(tmp14,tmp15,tmp16,null());
 		}
-		HX_STACK_LINE(139)
+		HX_STACK_LINE(141)
 		tmp9->set_center(tmp10);
 	}
 return null();
@@ -794,11 +798,11 @@ Float Main_obj::shake_amount;
 
 Void Main_obj::shake( Float _amount){
 {
-		HX_STACK_FRAME("Main","shake",0xf85024f1,"Main.shake","Main.hx",143,0x087e5c05)
+		HX_STACK_FRAME("Main","shake",0xf85024f1,"Main.shake","Main.hx",145,0x087e5c05)
 		HX_STACK_ARG(_amount,"_amount")
-		HX_STACK_LINE(144)
+		HX_STACK_LINE(146)
 		::Main_obj::shaking = true;
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(147)
 		::Main_obj::shake_amount = _amount;
 	}
 return null();

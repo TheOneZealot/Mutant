@@ -22,6 +22,7 @@ import creatures.Player;
 class World
 {
 	public static var debugdraw:DebugDraw;
+	public var physics:Physics;
 
 	var map:TiledMap;
 	var map_static:Body;
@@ -116,6 +117,8 @@ class World
 						creature.flipx = creature_facing_left;
 						// add creature to entity array
 						entities.push(creature);
+						// add controller to physics engine
+						physics.controllers.push(creature.controller);
 						// assign player to creature if it is the player
 						if (creature_name == "Player")
 						{
@@ -171,9 +174,15 @@ class World
 			depth: 1000
 		});
 		Luxe.physics.nape.debugdraw = debugdraw;
-		Luxe.physics.nape.draw = false;
-
+		Luxe.physics.nape.draw = true;
 		Luxe.physics.nape.space.clear();
+
+		if (physics != null)
+		{
+			physics.destroy();
+			physics = null;
+		}
+		physics = Luxe.physics.add_engine(Physics);
 
 		if (map != null)
 		{

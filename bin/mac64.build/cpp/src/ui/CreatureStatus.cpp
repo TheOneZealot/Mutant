@@ -185,36 +185,23 @@ HX_STACK_ARG(_target,"_target")
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::ui::CreatureStatus,_g)
 		int __ArgCount() const { return 1; }
 		Void run(::phoenix::Vector _pos){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","ui/CreatureStatus.hx",42,0xc73e9732)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","ui/CreatureStatus.hx",41,0xc73e9732)
 			HX_STACK_ARG(_pos,"_pos")
 			{
-
-				HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,::ui::CreatureStatus,_g)
-				int __ArgCount() const { return 0; }
-				Void run(){
-					HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","ui/CreatureStatus.hx",42,0xc73e9732)
-					{
-						HX_STACK_LINE(43)
-						::phoenix::Vector tmp20 = _g->target->get_pos();		HX_STACK_VAR(tmp20,"tmp20");
-						HX_STACK_LINE(43)
-						::phoenix::Vector tmp21 = _g->get_screen_pos(tmp20);		HX_STACK_VAR(tmp21,"tmp21");
-						HX_STACK_LINE(43)
-						::phoenix::Vector screen_pos = tmp21;		HX_STACK_VAR(screen_pos,"screen_pos");
-						HX_STACK_LINE(44)
-						Float tmp22 = screen_pos->x;		HX_STACK_VAR(tmp22,"tmp22");
-						HX_STACK_LINE(44)
-						_g->set_x(tmp22);
-						HX_STACK_LINE(45)
-						Float tmp23 = screen_pos->y;		HX_STACK_VAR(tmp23,"tmp23");
-						HX_STACK_LINE(45)
-						_g->set_y(tmp23);
-					}
-					return null();
-				}
-				HX_END_LOCAL_FUNC0((void))
-
 				HX_STACK_LINE(42)
-				::snow::Snow_obj::next_queue->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )( Dynamic(new _Function_3_1(_g)));
+				::phoenix::Vector tmp20 = _g->target->get_pos();		HX_STACK_VAR(tmp20,"tmp20");
+				HX_STACK_LINE(42)
+				::phoenix::Vector tmp21 = _g->get_screen_pos(tmp20);		HX_STACK_VAR(tmp21,"tmp21");
+				HX_STACK_LINE(42)
+				::phoenix::Vector screen_pos = tmp21;		HX_STACK_VAR(screen_pos,"screen_pos");
+				HX_STACK_LINE(43)
+				Float tmp22 = screen_pos->x;		HX_STACK_VAR(tmp22,"tmp22");
+				HX_STACK_LINE(43)
+				_g->set_x(tmp22);
+				HX_STACK_LINE(44)
+				Float tmp23 = screen_pos->y;		HX_STACK_VAR(tmp23,"tmp23");
+				HX_STACK_LINE(44)
+				_g->set_y(tmp23);
 			}
 			return null();
 		}
@@ -223,26 +210,26 @@ HX_STACK_ARG(_target,"_target")
 		HX_STACK_LINE(41)
 		_this->_pos_handlers->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )( Dynamic(new _Function_2_1(_g)));
 	}
-	HX_STACK_LINE(49)
+	HX_STACK_LINE(47)
 	::Creature tmp17 = this->target;		HX_STACK_VAR(tmp17,"tmp17");
 
 	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_4,::ui::CreatureStatus,_g)
 	int __ArgCount() const { return 1; }
 	Void run(Dynamic _){
-		HX_STACK_FRAME("*","_Function_1_4",0x5200ed3a,"*._Function_1_4","ui/CreatureStatus.hx",49,0xc73e9732)
+		HX_STACK_FRAME("*","_Function_1_4",0x5200ed3a,"*._Function_1_4","ui/CreatureStatus.hx",47,0xc73e9732)
 		HX_STACK_ARG(_,"_")
 		{
-			HX_STACK_LINE(49)
+			HX_STACK_LINE(47)
 			Dynamic func = _g->update_health_dyn();		HX_STACK_VAR(func,"func");
-			HX_STACK_LINE(49)
+			HX_STACK_LINE(47)
 			{
-				HX_STACK_LINE(49)
+				HX_STACK_LINE(47)
 				bool tmp18 = (func != null());		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(49)
+				HX_STACK_LINE(47)
 				if ((tmp18)){
-					HX_STACK_LINE(49)
+					HX_STACK_LINE(47)
 					Dynamic tmp19 = func;		HX_STACK_VAR(tmp19,"tmp19");
-					HX_STACK_LINE(49)
+					HX_STACK_LINE(47)
 					::snow::Snow_obj::next_queue->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp19);
 				}
 			}
@@ -251,27 +238,27 @@ HX_STACK_ARG(_target,"_target")
 	}
 	HX_END_LOCAL_FUNC1((void))
 
-	HX_STACK_LINE(49)
+	HX_STACK_LINE(47)
 	tmp17->events->listen(HX_HCSTRING("health.*","\xd8","\xaf","\x56","\xe9"), Dynamic(new _Function_1_4(_g)));
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(48)
 	::Creature tmp18 = this->target;		HX_STACK_VAR(tmp18,"tmp18");
 
 	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_5,::ui::CreatureStatus,_g)
 	int __ArgCount() const { return 1; }
 	Void run(Dynamic _){
-		HX_STACK_FRAME("*","_Function_1_5",0x5200ed3b,"*._Function_1_5","ui/CreatureStatus.hx",50,0xc73e9732)
+		HX_STACK_FRAME("*","_Function_1_5",0x5200ed3b,"*._Function_1_5","ui/CreatureStatus.hx",48,0xc73e9732)
 		HX_STACK_ARG(_,"_")
 		{
-			HX_STACK_LINE(51)
+			HX_STACK_LINE(49)
 			_g->healthbar->destroy();
-			HX_STACK_LINE(52)
+			HX_STACK_LINE(50)
 			_g->destroy();
 		}
 		return null();
 	}
 	HX_END_LOCAL_FUNC1((void))
 
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(48)
 	tmp18->events->listen(HX_HCSTRING("kill","\x9e","\xdf","\x09","\x47"), Dynamic(new _Function_1_5(_g)));
 }
 ;
@@ -293,23 +280,23 @@ Dynamic CreatureStatus_obj::__Create(hx::DynamicArray inArgs)
 
 Void CreatureStatus_obj::update_health( ){
 {
-		HX_STACK_FRAME("ui.CreatureStatus","update_health",0x5812faef,"ui.CreatureStatus.update_health","ui/CreatureStatus.hx",57,0xc73e9732)
+		HX_STACK_FRAME("ui.CreatureStatus","update_health",0x5812faef,"ui.CreatureStatus.update_health","ui/CreatureStatus.hx",55,0xc73e9732)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(56)
 		::ui::AttributeBar tmp = this->healthbar;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(56)
 		::Creature tmp1 = this->target;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(56)
 		int tmp2 = tmp1->health;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(56)
 		tmp->set_value(tmp2);
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(57)
 		::ui::AttributeBar tmp3 = this->healthbar;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(57)
 		::Creature tmp4 = this->target;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(57)
 		int tmp5 = tmp4->max_health;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(57)
 		tmp3->set_max_value(tmp5);
 	}
 return null();
@@ -319,64 +306,64 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(CreatureStatus_obj,update_health,(void))
 
 ::phoenix::Vector CreatureStatus_obj::get_screen_pos( ::phoenix::Vector _pos){
-	HX_STACK_FRAME("ui.CreatureStatus","get_screen_pos",0xfd6e320d,"ui.CreatureStatus.get_screen_pos","ui/CreatureStatus.hx",63,0xc73e9732)
+	HX_STACK_FRAME("ui.CreatureStatus","get_screen_pos",0xfd6e320d,"ui.CreatureStatus.get_screen_pos","ui/CreatureStatus.hx",61,0xc73e9732)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_pos,"_pos")
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(62)
 	::phoenix::Vector tmp;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(62)
 	{
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		::luxe::Camera tmp1 = ::Luxe_obj::camera;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		::phoenix::Vector tmp2;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		{
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp3 = this->w;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp4 = -(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp5 = (Float(tmp4) / Float((int)2));		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp6 = this->h;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp7 = (Float(tmp6) / Float((int)2));		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp8 = -(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp9 = (tmp8 - (int)20);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			::phoenix::Vector tmp10 = ::phoenix::Vector_obj::__new(tmp5,tmp9,null(),null());		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			::phoenix::Vector b = tmp10;		HX_STACK_VAR(b,"b");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp11 = (_pos->x + b->x);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp12 = (_pos->y + b->y);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			Float tmp13 = (_pos->z + b->z);		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(62)
 			tmp2 = ::phoenix::Vector_obj::__new(tmp11,tmp12,tmp13,null());
 		}
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		::phoenix::Vector tmp3 = tmp1->world_point_to_screen(tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		::phoenix::Vector a = tmp3;		HX_STACK_VAR(a,"a");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		::UserInterface tmp4 = ::Main_obj::ui;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		Float b = tmp4->scale;		HX_STACK_VAR(b,"b");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		Float tmp5 = (Float(a->x) / Float(b));		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		Float tmp6 = (Float(a->y) / Float(b));		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		Float tmp7 = (Float(a->z) / Float(b));		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(62)
 		tmp = ::phoenix::Vector_obj::__new(tmp5,tmp6,tmp7,null());
 	}
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(62)
 	return tmp;
 }
 

@@ -43,6 +43,9 @@
 #ifndef INCLUDED_luxe_Objects
 #include <luxe/Objects.h>
 #endif
+#ifndef INCLUDED_luxe_PhysicsEngine
+#include <luxe/PhysicsEngine.h>
+#endif
 #ifndef INCLUDED_luxe_Sprite
 #include <luxe/Sprite.h>
 #endif

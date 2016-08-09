@@ -44,7 +44,7 @@
     <property name="Texture" value="Prop_Crate"/>
    </properties>
   </object>
-  <object id="38" name="scientist1" type="Spawn" x="64" y="192" width="16" height="32">
+  <object id="38" name="scientist1" type="Spawn" x="32" y="128" width="16" height="32">
    <properties>
     <property name="Creature" value="Scientist"/>
     <property name="Facing Left" type="bool" value="true"/>

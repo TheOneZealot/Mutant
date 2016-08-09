@@ -287,7 +287,12 @@ HX_STACK_ARG(_parent,"_parent")
 		HX_STACK_ARG(_,"_")
 		{
 			HX_STACK_LINE(67)
-			_g->set_visible(true);
+			bool tmp45 = (_g->destroyed == false);		HX_STACK_VAR(tmp45,"tmp45");
+			HX_STACK_LINE(67)
+			if ((tmp45)){
+				HX_STACK_LINE(67)
+				_g->set_visible(true);
+			}
 		}
 		return null();
 	}
@@ -305,7 +310,12 @@ HX_STACK_ARG(_parent,"_parent")
 		HX_STACK_ARG(_,"_")
 		{
 			HX_STACK_LINE(68)
-			_g->set_visible(false);
+			bool tmp46 = (_g->destroyed == false);		HX_STACK_VAR(tmp46,"tmp46");
+			HX_STACK_LINE(68)
+			if ((tmp46)){
+				HX_STACK_LINE(68)
+				_g->set_visible(false);
+			}
 		}
 		return null();
 	}

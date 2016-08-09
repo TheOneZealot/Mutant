@@ -61,7 +61,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(17)
 	this->add(tmp3);
 	HX_STACK_LINE(19)
-	this->set(HX_HCSTRING("playing","\x6e","\x0f","\x18","\x8a"),null(),null());
+	this->set(HX_HCSTRING("paused","\xae","\x40","\x84","\xef"),null(),null());
 }
 ;
 	return null();

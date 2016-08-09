@@ -6,11 +6,13 @@
 #endif
 
 HX_DECLARE_CLASS0(Creature)
+HX_DECLARE_CLASS0(Physics)
 HX_DECLARE_CLASS0(World)
 HX_DECLARE_CLASS1(creatures,Player)
 HX_DECLARE_CLASS1(luxe,Emitter)
 HX_DECLARE_CLASS1(luxe,Entity)
 HX_DECLARE_CLASS1(luxe,Objects)
+HX_DECLARE_CLASS1(luxe,PhysicsEngine)
 HX_DECLARE_CLASS1(luxe,Sprite)
 HX_DECLARE_CLASS1(luxe,Visual)
 HX_DECLARE_CLASS3(luxe,importers,tiled,TiledMap)
@@ -47,6 +49,7 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("World","\x32","\x06","\x92","\x61"); }
 
 		static ::luxe::physics::nape::DebugDraw debugdraw;
+		::Physics physics;
 		::luxe::importers::tiled::TiledMap map;
 		::nape::phys::Body map_static;
 		::creatures::Player player;

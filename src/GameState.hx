@@ -16,7 +16,7 @@ class GameState extends States
 		add(new Playing());
 		add(new Paused());
 
-		set('playing');
+		set('paused');
 	}
 }
 

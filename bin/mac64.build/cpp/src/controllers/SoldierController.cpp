@@ -58,6 +58,9 @@
 #ifndef INCLUDED_luxe_Objects
 #include <luxe/Objects.h>
 #endif
+#ifndef INCLUDED_luxe_PhysicsEngine
+#include <luxe/PhysicsEngine.h>
+#endif
 #ifndef INCLUDED_luxe_Resources
 #include <luxe/Resources.h>
 #endif

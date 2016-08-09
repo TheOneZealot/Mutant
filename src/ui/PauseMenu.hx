@@ -49,7 +49,7 @@ class PauseMenu extends Panel
 			y: (h - 8) / 2 + 16,
 			w: 32, h: 8,
 			text: 'reset',
-			depth: depth+10,
+			depth: depth + 10,
 			onclick: function(_,_) {
 				trace('clicked');
 				Luxe.events.fire('reset');
@@ -64,7 +64,7 @@ class PauseMenu extends Panel
 
 		visible = GameState.paused;
 
-		GameState.events.listen('paused.enter', function(_) { visible = true; });
-		GameState.events.listen('paused.leave', function(_) { visible = false; });
+		GameState.events.listen('paused.enter', function(_) { if (destroyed == false) visible = true; });
+		GameState.events.listen('paused.leave', function(_) { if (destroyed == false) visible = false; });
 	}
 }

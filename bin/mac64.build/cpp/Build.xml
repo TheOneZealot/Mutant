@@ -6039,11 +6039,6 @@
    <depend name="include/snow/systems/assets/AssetJSON.h"/>
    <depend name="include/snow/systems/assets/AssetText.h"/>
   </file>
-  <file name="src/luxe/PhysicsEngine.cpp">
-   <depend name="include/Luxe.h"/>
-   <depend name="include/luxe/PhysicsEngine.h"/>
-   <depend name="include/phoenix/Vector.h"/>
-  </file>
   <file name="src/luxe/Physics.cpp">
    <depend name="include/Luxe.h"/>
    <depend name="include/Type.h"/>
@@ -6642,6 +6637,7 @@
    <depend name="include/luxe/Events.h"/>
    <depend name="include/luxe/ID.h"/>
    <depend name="include/luxe/Objects.h"/>
+   <depend name="include/luxe/PhysicsEngine.h"/>
    <depend name="include/luxe/Resources.h"/>
    <depend name="include/luxe/Sprite.h"/>
    <depend name="include/luxe/States.h"/>
@@ -6726,6 +6722,7 @@
    <depend name="include/haxe/xml/Parser.h"/>
   </file>
   <file name="src/World.cpp">
+   <depend name="include/Controller.h"/>
    <depend name="include/Creature.h"/>
    <depend name="include/Luxe.h"/>
    <depend name="include/Physics.h"/>
@@ -6830,14 +6827,6 @@
    <depend name="include/ui/PauseMenu.h"/>
    <depend name="include/ui/render/MutantMintRenderer.h"/>
   </file>
-  <file name="src/phoenix/Color.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/luxe/tween/Actuate.h"/>
-   <depend name="include/luxe/tween/actuators/IGenericActuator.h"/>
-   <depend name="include/phoenix/Color.h"/>
-   <depend name="include/phoenix/ColorHSL.h"/>
-   <depend name="include/phoenix/ColorHSV.h"/>
-  </file>
   <file name="src/Type.cpp">
    <depend name="include/Type.h"/>
    <depend name="include/ValueType.h"/>
@@ -6913,9 +6902,33 @@
    <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
   </file>
   <file name="src/Physics.cpp">
+   <depend name="include/Controller.h"/>
+   <depend name="include/GameState.h"/>
+   <depend name="include/Luxe.h"/>
    <depend name="include/Physics.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/luxe/Component.h"/>
+   <depend name="include/luxe/Draw.h"/>
+   <depend name="include/luxe/Emitter.h"/>
+   <depend name="include/luxe/Engine.h"/>
+   <depend name="include/luxe/Entity.h"/>
+   <depend name="include/luxe/ID.h"/>
+   <depend name="include/luxe/Objects.h"/>
+   <depend name="include/luxe/PhysicsEngine.h"/>
+   <depend name="include/luxe/States.h"/>
    <depend name="include/nape/callbacks/CbType.h"/>
    <depend name="include/nape/dynamics/InteractionFilter.h"/>
+   <depend name="include/nape/geom/Vec2.h"/>
+   <depend name="include/nape/phys/Body.h"/>
+   <depend name="include/nape/phys/Interactor.h"/>
+   <depend name="include/phoenix/Color.h"/>
+   <depend name="include/phoenix/Vector.h"/>
+   <depend name="include/phoenix/geometry/Geometry.h"/>
+   <depend name="include/phoenix/geometry/LineGeometry.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_CbSet.cpp">
    <depend name="include/zpp_nape/callbacks/ZPP_CbSet.h"/>
@@ -7010,6 +7023,19 @@
    <depend name="include/zpp_nape/dynamics/ZPP_InteractionFilter.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
+  </file>
+  <file name="src/phoenix/Color.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/luxe/tween/Actuate.h"/>
+   <depend name="include/luxe/tween/actuators/IGenericActuator.h"/>
+   <depend name="include/phoenix/Color.h"/>
+   <depend name="include/phoenix/ColorHSL.h"/>
+   <depend name="include/phoenix/ColorHSV.h"/>
+  </file>
+  <file name="src/luxe/PhysicsEngine.cpp">
+   <depend name="include/Luxe.h"/>
+   <depend name="include/luxe/PhysicsEngine.h"/>
+   <depend name="include/phoenix/Vector.h"/>
   </file>
   <file name="src/Main.cpp">
    <depend name="include/Creature.h"/>
@@ -7196,6 +7222,7 @@
    <depend name="include/luxe/Events.h"/>
    <depend name="include/luxe/ID.h"/>
    <depend name="include/luxe/Objects.h"/>
+   <depend name="include/luxe/PhysicsEngine.h"/>
    <depend name="include/luxe/Sprite.h"/>
    <depend name="include/luxe/States.h"/>
    <depend name="include/luxe/Visual.h"/>
@@ -7364,6 +7391,7 @@
    <depend name="include/zpp_nape/shape/ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_Shape.h"/>
+   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
   </file>
   <file name="src/luxe/Component.cpp">
    <depend name="include/Luxe.h"/>
@@ -7679,16 +7707,16 @@
   <lib name='${HXCPP}/lib/${BINDIR}/libzlib${LIBEXTRA}${LIBEXT}'/>
 </target>
 
-<set name="LINC_OGG_PATH" value="/usr/lib/haxelib/linc_ogg/git/"/>
+<set name="LINC_OGG_PATH" value="/usr/local/lib/haxe/lib/linc_ogg/git/"/>
 <include name="${LINC_OGG_PATH}linc/linc_ogg.xml" />
-<set name="LINC_OPENAL_PATH" value="/usr/lib/haxelib/linc_openal/git/"/>
+<set name="LINC_OPENAL_PATH" value="/usr/local/lib/haxe/lib/linc_openal/git/"/>
 <include name="${LINC_OPENAL_PATH}linc/linc_openal.xml" />
-<set name="LINC_OPENGL_PATH" value="/usr/lib/haxelib/linc_opengl/git/"/>
+<set name="LINC_OPENGL_PATH" value="/usr/local/lib/haxe/lib/linc_opengl/git/"/>
 <include name="${LINC_OPENGL_PATH}linc/linc_opengl.xml" />
-<set name="LINC_SDL_PATH" value="/usr/lib/haxelib/linc_sdl/git/"/>
+<set name="LINC_SDL_PATH" value="/usr/local/lib/haxe/lib/linc_sdl/git/"/>
 <include name="${LINC_SDL_PATH}linc/linc_sdl.xml" />
-<set name="LINC_STB_IMAGE_PATH" value="/usr/lib/haxelib/linc_stb/git/"/>
+<set name="LINC_STB_IMAGE_PATH" value="/usr/local/lib/haxe/lib/linc_stb/git/"/>
 <include name="${LINC_STB_IMAGE_PATH}linc/linc_stb_image.xml" />
-<set name="LINC_TIMESTAMP_PATH" value="/usr/lib/haxelib/linc_timestamp/git/"/>
+<set name="LINC_TIMESTAMP_PATH" value="/usr/local/lib/haxe/lib/linc_timestamp/git/"/>
 <include name="${LINC_TIMESTAMP_PATH}linc/linc_timestamp.xml" />
 </xml>

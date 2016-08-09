@@ -154,10 +154,10 @@ HX_STACK_ARG(_options,"_options")
 	Dynamic tmp10 = this->options;		HX_STACK_VAR(tmp10,"tmp10");
 	HX_STACK_LINE(52)
 	Dynamic tmp11 = tmp10->__Field(HX_HCSTRING("visible","\x72","\x78","\x24","\xa3"), hx::paccDynamic );		HX_STACK_VAR(tmp11,"tmp11");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(54)
 	Float tmp12 = this->depth;		HX_STACK_VAR(tmp12,"tmp12");
-	HX_STACK_LINE(53)
-	Float tmp13 = (tmp12 + ((Float)0.001));		HX_STACK_VAR(tmp13,"tmp13");
+	HX_STACK_LINE(54)
+	Float tmp13 = (tmp12 + ((Float)0.1));		HX_STACK_VAR(tmp13,"tmp13");
 	struct _Function_1_1{
 		inline static Dynamic Block( hx::ObjectPtr< ::mint::Button_obj > __this,Dynamic &tmp6,Float &tmp13,Dynamic &tmp9,Dynamic &tmp11,::String &tmp4,Float &tmp2,Float &tmp1,::String &tmp8){
 			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","mint/Button.hx",44,0x6433b2ff)
@@ -186,34 +186,34 @@ HX_STACK_ARG(_options,"_options")
 	::mint::Label tmp15 = ::mint::Label_obj::__new(tmp14);		HX_STACK_VAR(tmp15,"tmp15");
 	HX_STACK_LINE(44)
 	this->label = tmp15;
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(57)
 	::mint::render::Rendering tmp16 = this->rendering;		HX_STACK_VAR(tmp16,"tmp16");
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(57)
 	::mint::render::Renderer tmp17 = tmp16->get(hx::ClassOf< ::mint::Button >(),hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp17,"tmp17");
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(57)
 	this->renderer = tmp17;
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	Dynamic tmp18 = this->options;		HX_STACK_VAR(tmp18,"tmp18");
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	Dynamic tmp19 = tmp18->__Field(HX_HCSTRING("onclick","\xc9","\xaa","\x6e","\x4b"), hx::paccDynamic );		HX_STACK_VAR(tmp19,"tmp19");
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	bool tmp20 = (tmp19 != null());		HX_STACK_VAR(tmp20,"tmp20");
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	if ((tmp20)){
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(59)
 		::mint::core::Signal tmp21 = this->onmouseup;		HX_STACK_VAR(tmp21,"tmp21");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(59)
 		Dynamic tmp22 = this->options;		HX_STACK_VAR(tmp22,"tmp22");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(59)
 		Dynamic tmp23 = tmp22->__Field(HX_HCSTRING("onclick","\xc9","\xaa","\x6e","\x4b"), hx::paccDynamic );		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(59)
 		tmp21->listen(tmp23);
 	}
 	HX_STACK_LINE(49)
 	{
 		HX_STACK_LINE(50)
 		int _idx = (int)0;		HX_STACK_VAR(_idx,"_idx");
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(61)
 		::mint::core::Signal tmp21 = this->oncreate;		HX_STACK_VAR(tmp21,"tmp21");
 		HX_STACK_LINE(51)
 		int tmp22 = tmp21->listeners->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp22,"tmp22");
@@ -230,7 +230,7 @@ HX_STACK_ARG(_options,"_options")
 				HX_STACK_LINE(52)
 				break;
 			}
-			HX_STACK_LINE(60)
+			HX_STACK_LINE(61)
 			::mint::core::Signal tmp25 = this->oncreate;		HX_STACK_VAR(tmp25,"tmp25");
 			HX_STACK_LINE(53)
 			Dynamic tmp26 = tmp25->listeners->__GetItem(_idx);		HX_STACK_VAR(tmp26,"tmp26");
@@ -257,7 +257,7 @@ HX_STACK_ARG(_options,"_options")
 				HX_STACK_LINE(60)
 				break;
 			}
-			HX_STACK_LINE(60)
+			HX_STACK_LINE(61)
 			::mint::core::Signal tmp25 = this->oncreate;		HX_STACK_VAR(tmp25,"tmp25");
 			HX_STACK_LINE(61)
 			int tmp26 = (_count - (int)1);		HX_STACK_VAR(tmp26,"tmp26");
@@ -269,7 +269,7 @@ HX_STACK_ARG(_options,"_options")
 			bool tmp28 = (fn == null());		HX_STACK_VAR(tmp28,"tmp28");
 			HX_STACK_LINE(62)
 			if ((tmp28)){
-				HX_STACK_LINE(60)
+				HX_STACK_LINE(61)
 				::mint::core::Signal tmp29 = this->oncreate;		HX_STACK_VAR(tmp29,"tmp29");
 				HX_STACK_LINE(62)
 				int tmp30 = (_count - (int)1);		HX_STACK_VAR(tmp30,"tmp30");

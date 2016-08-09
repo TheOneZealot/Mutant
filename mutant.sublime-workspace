@@ -1,1 +1,1435 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hit",
+				"hit_area"
+			],
+			[
+				"lister",
+				"listeners"
+			],
+			[
+				"time",
+				"p· timer	luxe.Timer"
+			],
+			[
+				"dama",
+				"damage_flash"
+			],
+			[
+				"dameg",
+				"damage_flash"
+			],
+			[
+				"d",
+				"damage_flash"
+			],
+			[
+				"rend",
+				"p· renderer	mint.render.Renderer"
+			],
+			[
+				"pa",
+				"pause_menu"
+			],
+			[
+				"vis",
+				"p· visible	Bool"
+			],
+			[
+				"speed",
+				"speed_x"
+			],
+			[
+				"dro",
+				"m· drop	 "
+			],
+			[
+				"des",
+				"p· destroyed	Bool"
+			],
+			[
+				"col",
+				"color_bar_empty"
+			],
+			[
+				"_ma",
+				"_max"
+			],
+			[
+				"to",
+				"m· toColorHSV	phoenix.ColorHSV"
+			],
+			[
+				"max",
+				"max_value"
+			],
+			[
+				"upa",
+				"update_expbar"
+			],
+			[
+				"upd",
+				"update_expbar"
+			],
+			[
+				"heal",
+				"healthbar"
+			],
+			[
+				"ex",
+				"p· exp_level	Int"
+			],
+			[
+				"exp",
+				"expbar"
+			],
+			[
+				"colo",
+				"color_bar"
+			],
+			[
+				"creta",
+				"creature"
+			],
+			[
+				"crea",
+				"creature_status"
+			],
+			[
+				"creat",
+				"creature_statuses"
+			],
+			[
+				"shake",
+				"shake_vector"
+			],
+			[
+				"Gam",
+				"GameState"
+			],
+			[
+				"sha",
+				"shake_vector"
+			],
+			[
+				"lis",
+				"listeners"
+			],
+			[
+				"ma",
+				"p· max_value	Int"
+			],
+			[
+				"get",
+				"get_bar_width"
+			],
+			[
+				"set",
+				"m· set_xy	 "
+			],
+			[
+				"Creat",
+				"CreatureStatus"
+			],
+			[
+				"ent",
+				"entity"
+			],
+			[
+				"pla",
+				"m· play	Void"
+			],
+			[
+				"game",
+				"GameState"
+			],
+			[
+				"jum",
+				"jumped_this_frame"
+			],
+			[
+				"fire",
+				"fire_interval"
+			],
+			[
+				"fir",
+				"fire_ready"
+			],
+			[
+				"fri",
+				"friction_air"
+			],
+			[
+				"gr",
+				"grounded"
+			],
+			[
+				"act",
+				"action_claw"
+			],
+			[
+				"ac",
+				"action"
+			],
+			[
+				"inp",
+				"m· inputpressed	Bool"
+			],
+			[
+				"bin",
+				"m· bind_key	 "
+			],
+			[
+				"bod",
+				"bodies"
+			],
+			[
+				"Body",
+				"BodyList"
+			],
+			[
+				"Bod",
+				"p· BodyList	BodyList"
+			],
+			[
+				"Ac",
+				"ActionOptions"
+			],
+			[
+				"map",
+				"map_static"
+			],
+			[
+				"e",
+				"entities"
+			],
+			[
+				"de",
+				"m· destroy	 "
+			],
+			[
+				"obj",
+				"object"
+			],
+			[
+				"clamp",
+				"m· clampi	Int"
+			],
+			[
+				"appl",
+				"applyheal_any"
+			],
+			[
+				"phy",
+				"Physics"
+			],
+			[
+				"phys",
+				"physobj"
+			],
+			[
+				"hea",
+				"healthbar"
+			],
+			[
+				"onc",
+				"m· onchange	mint.core.Signal<Int -> Int -> Void>"
+			],
+			[
+				"c",
+				"p· Control	Control"
+			],
+			[
+				"Mutant",
+				"MutantMintAttributeBarOptions"
+			],
+			[
+				"re",
+				"p· Rendering	Rendering"
+			],
+			[
+				"m",
+				"max_value"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"A",
+				"AttributeBar"
+			],
+			[
+				"Att",
+				"AttributeBarOptions"
+			],
+			[
+				"body",
+				"body_pos"
+			],
+			[
+				"Sp",
+				"Sprite"
+			],
+			[
+				"fil",
+				"p· filter_mag	phoenix.FilterType"
+			],
+			[
+				"tye",
+				"cbTypes"
+			],
+			[
+				"health",
+				"healthprogress"
+			],
+			[
+				"he",
+				"health"
+			],
+			[
+				"o",
+				"p· ortho_top	Null<Float>"
+			],
+			[
+				"render",
+				"rendering"
+			],
+			[
+				"red",
+				"rendering"
+			],
+			[
+				"a",
+				"m· addeq	nape.geom.Vec2"
+			],
+			[
+				"Inter",
+				"InteractionFilter"
+			],
+			[
+				"grav",
+				"p· gravMass	Float"
+			],
+			[
+				"lo",
+				"Log"
+			],
+			[
+				"ht",
+				"hit_occurred"
+			],
+			[
+				"is",
+				"m· isStatic	 "
+			],
+			[
+				"comp",
+				"p· components	luxe.structural.OrderedMap_String_luxe_Component"
+			],
+			[
+				"lux",
+				"luxe"
+			],
+			[
+				"po",
+				"p· pos	Null<phoenix.Vector>"
+			],
+			[
+				"Proje",
+				"ProjectileOptions"
+			],
+			[
+				"b",
+				"bodies"
+			],
+			[
+				"Bo",
+				"BodyList"
+			],
+			[
+				"CB",
+				"CBTYPE_TERRAIN"
+			],
+			[
+				"Cb",
+				"CbType"
+			],
+			[
+				"CBTY",
+				"CBTYPE_CREATURE"
+			],
+			[
+				"file",
+				"p· filter_min	phoenix.FilterType"
+			],
+			[
+				"beg",
+				"begin_interaction_handler"
+			],
+			[
+				"cb",
+				"p· CbType	CbType"
+			],
+			[
+				"Intera",
+				"InteractionListener"
+			],
+			[
+				"inter",
+				"p· InteractionListener	InteractionListener"
+			],
+			[
+				"mu",
+				"m· mul	nape.geom.Vec2"
+			],
+			[
+				"shape",
+				"p· castShape	Null<nape.shape.Shape>"
+			],
+			[
+				"pos",
+				"_pos"
+			],
+			[
+				"_",
+				"_texture"
+			],
+			[
+				"anim",
+				"p· animation	String"
+			],
+			[
+				"creatu",
+				"creatures"
+			],
+			[
+				"v",
+				"m· resolveClass	Class<Dynamic>"
+			],
+			[
+				"Tiled",
+				"TiledObject"
+			],
+			[
+				"impo",
+				"importers"
+			],
+			[
+				"tile",
+				"tiledmap_data"
+			],
+			[
+				"com",
+				"comp_data"
+			],
+			[
+				"Dyna",
+				"Dynamic"
+			],
+			[
+				"compon",
+				"component_data"
+			],
+			[
+				"on",
+				"ontouch"
+			],
+			[
+				"load",
+				"loaded"
+			],
+			[
+				"rou",
+				"rounded_y"
+			],
+			[
+				"round",
+				"rounded_x"
+			],
+			[
+				"add",
+				"m· addScalar	 "
+			],
+			[
+				"luxe",
+				"Luxe"
+			],
+			[
+				"Dyn",
+				"Dynamic"
+			],
+			[
+				"Crea",
+				"Creature"
+			],
+			[
+				"Sprite",
+				"SpriteAnimation"
+			],
+			[
+				"has",
+				"hasField"
+			],
+			[
+				"data",
+				"data_fields"
+			],
+			[
+				"ami",
+				"animation"
+			],
+			[
+				"anima",
+				"animated"
+			],
+			[
+				"tex",
+				"m· texture	phoenix.Texture"
+			],
+			[
+				"fie",
+				"m· field	Dynamic"
+			],
+			[
+				"text",
+				"texture"
+			],
+			[
+				"_creat",
+				"_creature"
+			],
+			[
+				"loa",
+				"m· load	 "
+			],
+			[
+				"parc",
+				"parcel"
+			],
+			[
+				"j",
+				"jsons"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/Main.hx",
+			"settings":
+			{
+				"buffer_size": 4087,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/World.hx",
+			"settings":
+			{
+				"buffer_size": 5135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/UserInterface.hx",
+			"settings":
+			{
+				"buffer_size": 3095,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ui/PauseMenu.hx",
+			"settings":
+			{
+				"buffer_size": 1372,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/GameState.hx",
+			"settings":
+			{
+				"buffer_size": 1159,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ui/CreatureStatus.hx",
+			"settings":
+			{
+				"buffer_size": 1328,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project.flow",
+			"settings":
+			{
+				"buffer_size": 499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/creatures/Player.hx",
+			"settings":
+			{
+				"buffer_size": 2084,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Creature.hx",
+			"settings":
+			{
+				"buffer_size": 3215,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/creatures/Scientist.hx",
+			"settings":
+			{
+				"buffer_size": 1484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/creatures/Soldier.hx",
+			"settings":
+			{
+				"buffer_size": 1582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Action.hx",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/actions/Claw.hx",
+			"settings":
+			{
+				"buffer_size": 1160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Projectile.hx",
+			"settings":
+			{
+				"buffer_size": 2425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Controller.hx",
+			"settings":
+			{
+				"buffer_size": 8284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/controllers/SoldierController.hx",
+			"settings":
+			{
+				"buffer_size": 1684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/controllers/PlayerController.hx",
+			"settings":
+			{
+				"buffer_size": 776,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Haxe/Support/Hxml.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 125.0,
+		"last_filter": "haxe",
+		"selected_items":
+		[
+			[
+				"haxe",
+				"Set Syntax: Haxe"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"packa",
+				"Package Control: Add Repository"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hmelsom/Documents/GitHub/Mutant",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/animations",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/fonts",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/maps",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/maps/test",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/textures",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/actions",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/controllers",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/creatures",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/render"
+	],
+	"file_history":
+	[
+		"/usr/local/lib/haxe/lib/snow/git/snow/types/Types.hx",
+		"/Users/hmelsom/Downloads/PersonKlassData - Personer.csv",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/PauseMenu.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/GameState.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/render/AttributeBar.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/AttributeBar.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/creatures/Player.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/CreatureStatus.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/Physics.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/Projectile.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/CameraUtils.hx",
+		"/usr/lib/haxelib/luxe/git/luxe/Camera.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/animations/Creature_Scientist.json",
+		"/usr/lib/haxelib/mint/git/mint/render/luxe/Progress.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/project.flow",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/Controller.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/creatures/Soldier.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/controllers/SoldierController.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/AIController.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/World.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/ui/render/MutantMintRenderer.hx",
+		"/usr/lib/haxelib/mint/git/mint/Progress.hx",
+		"/usr/lib/haxelib/mint/git/mint/render/luxe/LuxeMintRender.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/animations/Creature_Soldier.json",
+		"/Users/hmelsom/Documents/GitHub/Mutant/assets/animations/Creature_Player.json",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/controllers/PlayerController.hx",
+		"/Users/hmelsom/Documents/GitHub/Mutant/src/PlayerController.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/Simulation.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/DynamicShape.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/assets/entities/Creatures.json",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/assets/animations/Entity_Player.json",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/DamageTouch.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/Creature.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/World.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/PlayerController.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/DynamicController.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/src/Main.hx",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/project.flow",
+		"/Users/hmelsom/Documents/GitHub/RedSnow/assets/animations/Entity_Enemy.json",
+		"/Users/hmelsom/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hmelsom/Library/Application Support/Sublime Text 3/Packages/haxe_completion/haxe_completion.sublime-settings",
+		"/Volumes/Tiled 0.16.1/README.md",
+		"/usr/lib/haxelib/luxe/git/tests/features/build_all.sh",
+		"/Users/hmelsom/OpenFlProject/OpenFlProject.sublime-project",
+		"/Users/hmelsom/Library/Application Support/Sublime Text 3/Packages/Haxe/Support/Default.sublime-keymap",
+		"/Users/hmelsom/OpenFlProject/build.hxml",
+		"/Users/hmelsom/Library/Application Support/Sublime Text 3/Packages/Haxe/Support/Haxe.sublime-settings",
+		"/Users/hmelsom/OpenFlProject/Export/flash/bin/OpenFlProject.swf",
+		"/Users/hmelsom/OpenFlProject/project.xml",
+		"/Users/hmelsom/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/hmelsom/Documents/GitHub/Mutant/src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"applydamage_any",
+			"applyheal_any",
+			"applydamage",
+			"fire('applydamage",
+			"applydamage",
+			"reset",
+			"follow",
+			"listeners.push",
+			"fire_ready_at",
+			"game_state",
+			"player",
+			"\"",
+			"direction",
+			"			}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/Main.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4016,
+								4016
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/World.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4501,
+								4501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/UserInterface.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								3095
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/ui/PauseMenu.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 263.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/GameState.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								963
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/ui/CreatureStatus.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "project.flow",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_flow/flow-file.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/creatures/Player.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1622,
+								1622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 488.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/Creature.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2239,
+								2239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 666.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/creatures/Scientist.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 263.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/creatures/Soldier.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								586,
+								586
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 37.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/Action.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/actions/Claw.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/Projectile.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2009,
+								2009
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 645.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "src/Controller.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1651,
+								1651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 791.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/controllers/SoldierController.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								448,
+								448
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/controllers/PlayerController.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								350,
+								350
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mutant.sublime-project",
+	"replace":
+	{
+		"height": 104.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 269.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

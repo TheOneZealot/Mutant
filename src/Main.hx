@@ -89,6 +89,8 @@ class Main extends luxe.Game
         });
 
         loaded = true;
+
+        gamestate.set('playing');
     }
 
     override function onkeyup(e:KeyEvent) 

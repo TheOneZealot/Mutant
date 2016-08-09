@@ -1821,9 +1821,6 @@
 #ifndef INCLUDED_luxe_Resources
 #include <luxe/Resources.h>
 #endif
-#ifndef INCLUDED_luxe_PhysicsEngine
-#include <luxe/PhysicsEngine.h>
-#endif
 #ifndef INCLUDED_luxe_ParcelProgress
 #include <luxe/ParcelProgress.h>
 #endif
@@ -1962,9 +1959,6 @@
 #ifndef INCLUDED_World
 #include <World.h>
 #endif
-#ifndef INCLUDED_phoenix_Color
-#include <phoenix/Color.h>
-#endif
 #ifndef INCLUDED_Type
 #include <Type.h>
 #endif
@@ -2006,6 +2000,12 @@
 #endif
 #ifndef INCLUDED_nape_dynamics_InteractionFilter
 #include <nape/dynamics/InteractionFilter.h>
+#endif
+#ifndef INCLUDED_phoenix_Color
+#include <phoenix/Color.h>
+#endif
+#ifndef INCLUDED_luxe_PhysicsEngine
+#include <luxe/PhysicsEngine.h>
 #endif
 #ifndef INCLUDED_phoenix_Vector
 #include <phoenix/Vector.h>
@@ -2690,7 +2690,6 @@ hx::RegisterResources( hx::GetResources() );
 ::luxe::Scene_obj::__register();
 ::luxe::ResourceStats_obj::__register();
 ::luxe::Resources_obj::__register();
-::luxe::PhysicsEngine_obj::__register();
 ::luxe::ParcelProgress_obj::__register();
 ::luxe::Parcel_obj::__register();
 ::luxe::NineSlice_obj::__register();
@@ -2737,7 +2736,6 @@ hx::RegisterResources( hx::GetResources() );
 ::controllers::PlayerController_obj::__register();
 ::actions::Claw_obj::__register();
 ::World_obj::__register();
-::phoenix::Color_obj::__register();
 ::Type_obj::__register();
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
@@ -2752,6 +2750,8 @@ hx::RegisterResources( hx::GetResources() );
 ::nape::callbacks::CbType_obj::__register();
 ::zpp_nape::util::ZNPList_ZPP_Shape_obj::__register();
 ::nape::dynamics::InteractionFilter_obj::__register();
+::phoenix::Color_obj::__register();
+::luxe::PhysicsEngine_obj::__register();
 ::phoenix::Vector_obj::__register();
 ::luxe::Game_obj::__register();
 ::Luxe_obj::__register();

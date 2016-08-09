@@ -167,7 +167,7 @@ HX_STACK_ARG(_game,"_game")
 	HX_STACK_LINE(61)
 	this->shutting_down = false;
 	HX_STACK_LINE(42)
-	this->build = HX_HCSTRING("+cdd34b70d0","\x6e","\xbc","\x43","\x65");
+	this->build = HX_HCSTRING("+7426394d10","\x01","\x0c","\x7c","\x18");
 	HX_STACK_LINE(41)
 	this->version = HX_HCSTRING("dev","\xd5","\x39","\x4c","\x00");
 	HX_STACK_LINE(71)

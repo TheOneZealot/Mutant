@@ -22,7 +22,7 @@
 -D linc_sdl
 -D linc_opengl
 -cp bin/mac64.build/haxe
--cp /usr/lib/haxelib/luxe/git/
+-cp /usr/local/lib/haxe/lib/luxe/git/
 -cp src/
 -lib hxcpp
 -lib mint
